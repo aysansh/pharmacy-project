@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+direction: rtl;
+max-width: 1500px;
+}
+
+@font-face {
+    font-family: "Iransans";
+    src: url("./fonts/ir_sans.ttf");
+}
+
+.container{
+    margin: auto;
+}
