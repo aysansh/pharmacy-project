@@ -8,31 +8,103 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../main page/style.css">
+
     <title>About Us</title>
 </head>
 
 <body>
 
-    <header>
+    <header class="main offcanvas-menu" style="position: relative;">
+        <div class="circle"></div>
 
 
+        <!-- نویگیشن -->
+        <nav class="row p-3 justify-content-between">
+            <div class="col-lg-10 mt-3 d-sm-none d-lg-block ">
+                <a href="" class="textcolor fw-normal m-4"> خانه </a>
+                <a href="" class="textcolor fw-normal m-4"> محصولات </a>
+                <a href="" class="textcolor fw-normal m-4"> مشاوره دارویی </a>
+                <a href="" class="textcolor fw-normal m-4"> پیگیری سفارش </a>
+                <a href="" class="textcolor fw-normal m-4"> ارتباط با ما </a>
+            </div>
+            <div class="col-lg-2 mt-3 align-items-center  text-center d-sm-none d-lg-flex">
+                <a href=""><i class="bi bi-heart icon text-white mx-2"> </i></a>
+                <a href=""><i class="bi bi-cart3 icon text-white mx-2"> </i></a>
+                <div><a href="" class="button textcolor fw-normal p-2">ورود/ثبت نام</a></div>
+            </div>
 
 
-        <div class="mb-5">
-            <img style="width: 100%;" src="../images/تکنسین-داروخانه.jpeg" alt="">
+            <!-- off convas -->
+            <div class="d-lg-none  d-sm-block fs-4">
+                <i class="bi bi-list fs-1 text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel" style="background:#b6ce9c ;">
+                    <div class="offcanvas-header mt-5">
+                        <h5 id="offcanvasRightLabel"> <a class="text-white" href=""> ورود/ثبت نام </a> </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="line-height: 4rem;">
+                        <ul>
+                            <li><a class="text-white" href="#section1"> خانه </a></li>
+                            <li><a class="text-white" href="#section2"> محصولات </a></li>
+                            <li><a class="text-white" href="#section3"> مشاوره دارویی </a></li>
+                            <li><a class="text-white" href="#section4"> پیگیری سفارش </a></li>
+                            <li><a class="text-white" href="#section5"> ارتباط با ما </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <!-- قسمت هدر -->
+        <div class="d-flex flex-row container">
+            <div class="col-lg-6 col-sm-12">
+                <div class="mt-5">
+                    <h2 style="font-size: 48px; color: #FFFFFF;font-weight: 600;margin-top: 7rem;"> داروخانه آنلاین
+                    </h2>
+                    <h1 style="color: #8BBA5A; margin-right: 150px; font-weight: 700;font-size: 58px;margin-top: 8rem;">
+                        دکتر دوستی شعار </h1>
+                </div>
+
+            </div>
+            <div class="col-lg-6 d-lg-block d-none"> <img src="../images/Asset 11dddd 1.png" alt=""></div>
+            <div class="custom-shape-divider-bottom-1681199124 ">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill" fill="#FFFFFF" fill-opacity="1"></path>
+                </svg>
+            </div>
         </div>
     </header>
 
-<!-- معرفی مجموعه -->
+    <!-- معرفی مجموعه -->
     <section class="container mb-5">
-        <div class="d-flex flex-row ">
-            <div class="col-6">
+
+        <div style="position: relative; margin: 32px 0 32px 0; " class="text-center ">
+            <div style="border: 1px solid #1E1E1E; opacity: 0.1; width: 40%; position: absolute;right: 0px;top: 12px;">
+            </div>
+            <h2 class="m-0" style=" opacity: 0.8;"> درباره ما </h2>
+            <div style="border: 1px solid #1E1E1E; opacity: 0.1; width: 40%; position: absolute;left: 0px;top: 12px;">
+            </div>
+        </div>
+
+        <div class="d-flex flex-row flex-wrap">
+            <div class="col-lg-6 col-sm-12">
                 <div style="position: relative;margin-bottom: 30px;">
-                    <div style="height: 30px;width: 10px; background-color: #323232; opacity: 0.5;  position: absolute; bottom: 0px;"></div>
+                    <div
+                        style="height: 30px;width: 10px; background-color: #323232; opacity: 0.5;  position: absolute; bottom: 0px;">
+                    </div>
                     <h2 style="margin-right:10px; color: #8BBA5A;">معرفی داروخانه دکتر دوستی </h2>
                 </div>
-                
-                <p style="font-size: 12px;font-weight: 400 ;line-height: 190% ;padding-left: 35px;">می‌گویند داستان هر تولدی پایان شاد یک داستان غم‌انگیز
+
+                <p style="font-size: 12px;font-weight: 400 ;line-height: 190% ;padding-left: 35px;">می‌گویند داستان هر
+                    تولدی پایان شاد یک داستان غم‌انگیز
                     است. همواره اختری فرو می‌افتد تا ستاره‌ای جدید بر
                     دامن آسمان زندگی بدرخشد. حکایت دیجیاتو نیز از جنس همین تولدها است. ستاره‌های درخشانی از افلاک وب
                     فارسی
@@ -59,39 +131,173 @@
                     خواندنی بر جا بگذاریم، زایشگر ستاره‌های درخشان آینده. دیجیاتو نبض دیجیتالی ماست در رگ کنجکاوی شما.
                 </p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
                 <img style="width: 100%;" src="../images/نسخه-خوانی2-انجمن-پرستاری.jpg" alt="">
             </div>
         </div>
     </section>
 
-<section>
 
-<div>
-    <div><svg xmlns="http://www.w3.org/2000/svg" width="510" height="510" fill="none" viewBox="0 0 510 510" class="myCircle__center">
-        <circle cx="255" cy="255" r="255" fill="#FAFBFD"></circle>
-        <path fill="#3391EC" d="M255.492 362.381c59.012 0 106.851-47.629 106.851-106.381s-47.839-106.38-106.851-106.38S148.641 197.248 148.641 256c0 58.752 47.839 106.381 106.851 106.381Z"></path>
-        <path fill="#0075E7" fill-rule="evenodd" d="M321.984 172.721c-16.298 36.085-52.721 61.211-95.038 61.211-25.732 0-49.285-9.291-67.459-24.687 17.383-35.312 53.842-59.625 96.005-59.625 25.135 0 48.244 8.64 66.492 23.101Zm30.714 39.048c-32.343 17.596-54.281 51.775-54.281 91.056 0 16.261 3.76 31.648 10.461 45.346 31.96-18.388 53.465-52.779 53.465-92.171 0-15.782-3.452-30.761-9.645-44.231Zm-77.503 148.807c.135-2.163.204-4.345.204-6.542 0-57.268-46.631-103.692-104.152-103.692-7.746 0-15.295.841-22.558 2.438-.032 1.07-.048 2.143-.048 3.22 0 58.752 47.839 106.381 106.851 106.381 6.731 0 13.317-.62 19.703-1.805Z" clip-rule="evenodd"></path>
-        <path fill="#3391EC" fill-rule="evenodd" d="M265.631 371.566a91.95 91.95 0 0 0 1.223-14.986c0-50.705-41.287-91.809-92.216-91.809-12.251 0-23.944 2.378-34.638 6.696C147.595 328.22 196.406 372 255.487 372c3.418 0 6.801-.147 10.144-.434Zm40.86-219.89c-9.07 41.218-45.956 72.07-90.079 72.07-24.172 0-46.172-9.259-62.616-24.409C173.743 163.928 211.808 140 255.487 140c18.292 0 35.6 4.197 51.004 11.676Zm57.381 61.673c-29.301 15.378-49.276 46.002-49.276 81.271 0 18.721 5.629 36.135 15.293 50.653C355.618 323.995 372 291.902 372 256c0-15.059-2.882-29.449-8.128-42.651Z" clip-rule="evenodd"></path>
-    </svg></div>
-    <div>
-        <div>
-            <div></div>
-            <h2></h2>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <h3></h3>
-            <div>
-                <a href=""><img src="" alt=""></a>
+
+    <!-- social medai section -->
+
+    <section class="container mb-5">
+
+        <div class="d-flex flex-row flex-wrap">
+
+            <div class="col-lg-6 col-sm-12"
+                style=" display: flex; justify-content: center;position: relative; ">
+                <img style=" transform: rotate(25deg); opacity: 0.3;" src="../images/icons8-hashtag-large-100.png" alt="">
+
+                <div class="d-flex flex-row" style="position:absolute; top: 0px; right: 0px;">
+                    <img height="48px" src="../images/icons8-twitter-circled-48.png" alt="">
+                    <div class="me-2">
+                        <h6 style="font-size: 12px;margin: 0;"> دنبال کننده </h6>
+                        <p style="font-size: 22px; font-weight: bold;"> 30.000 نفر </p>
+                    </div>
+                </div>
+
+
+
+                <div class="d-flex flex-row" style="position:absolute; top: 75px; right: 120px;">
+                    <img height="48px" src="../images/icons8-telegram-48.png" alt="">
+                    <div class="me-2">
+                        <h6 style="font-size: 12px;margin: 0;"> دنبال کننده </h6>
+                        <p style="font-size: 22px; font-weight: bold;"> 30.000 نفر </p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="d-flex flex-row" style="position:absolute; top: 150px; right: 240px;">
+                    <img height="48px" src="../images/icons8-youtube-48.png" alt="">
+                    <div class="me-2">
+                        <h6 style="font-size: 12px;margin: 0;"> دنبال کننده </h6>
+                        <p style="font-size: 22px; font-weight: bold;"> 30.000 نفر </p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="d-flex flex-row" style="position:absolute; top: 225px;right: 360px;">
+                    <img height="48px" src="../images/icons8-instagram-48.png" alt="">
+                    <div class="me-2">
+                        <h6 style="font-size: 12px;margin: 0;"> دنبال کننده </h6>
+                        <p style="font-size: 22px; font-weight: bold;"> 30.000 نفر </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-6 col-sm-12">
+                <div>
+                    <div style="position: relative;margin-bottom: 30px;">
+                        <div
+                            style="height: 30px;width: 10px; background-color: #323232; opacity: 0.5;  position: absolute; bottom: 0px;">
+                        </div>
+                        <h2 style="margin-right:10px; color: #8BBA5A;"> شبکه‌های اجتماعی </h2>
+
+                    </div>
+
+                    <p style="font-size: 12px;font-weight: 400 ;line-height: 190% ;padding-left: 35px;">می‌گویند داستان
+                        هر دایره مخاطبین دیجیاتو تنها به کسانی که از طریق وبسایت مطالب ما را دنبال می کنند، خلاصه نمی
+                        شود.
+                        پلتفرم دیجیاتو از همان ابتدا با تمرکز بسیار بر روی شبکه های اجتماعی بنا نهاده شد و حالا پس از
+                        سال ها فعالیت، صدها هزار نفر مطالب متنوع دیجیاتو را در شبکه های مختلف دنبال می کنند. تولید
+                        محتوای منحصر به فرد برای هر شبکه و اهمیت به بازخورد مخاطبین، از عواملی هستند که پلتفرم قدرتمند
+                        دیجیاتو در فضای مجازی را بنا نهاده اند.
+                    </p>
+                </div>
+                <div style="margin-top:4rem;">
+                    <h4 style=" color: #8BBA5A; font-size: 16px;">دیجیاتو در شبکه‌های اجتماعی </h4>
+                    <div class="mt-4" style="display: flex; justify-content: center;">
+                        <a href=""><img class="mx-4" width="32px" src="../images/icons8-telegram-24.png" alt=""></a>
+                        <a href=""><img class="mx-4" width="32px" src="../images/icons8-youtube-48.png" alt=""></a>
+                        <a href=""><img class="mx-4" width="32px" src="../images/icons8-twitter-48.png" alt=""></a>
+                        <a href=""><img class="mx-4" width="32px" src="../images/icons8-instagram-48.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-</section>
+    </section>
+
+
+
+    <footer
+        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c);padding: 3rem;">
+        <div class="d-flex flex-row container text-white flex-wrap">
+            <div class="col-xl-3 col-md-6 col-sm-12 mb-5" style="line-height: 20px;">
+                <div style="padding-left: 4rem;">
+                    <h4 style="font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;">درباره ما</h4>
+                    <p style="font-size: 10px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
+                        داروخانه در شهر کرمان که از شهریور ماه ۱۳۹۶ به صاحب امتیاز آقای
+                        دکتر فرزاد دوستی شعار و تحت نظارت آقای دکتر فرزاد دوستی شعار دارو ساز و آشنایی هر چه بهتر مصرف
+                        کنندگان از محصولات داروخانه راه اندازی گردیده است.</p>
+                    <div>
+                        <img src="../images/37.png" alt="">
+                        <img src="../images/1400092408414233224276264 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
+                <div class="px-3" style="font-weight: 500;
+            font-size: 10px;
+            line-height: 400%;">
+                    <h4 style="font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;">دسترسی سریع</h4>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> درباره ما </a></div>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> تماس با ما </a></div>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> قوانین و مقررات </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
+                <div class="px-3" style="font-weight: 500;
+            font-size: 10px;
+            line-height: 400%;">
+                    <h4 style="font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;"> لینک های مفید </h4>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک 1 </a> </div>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک2 </a> </div>
+                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک3 </a> </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
+                <div class="ps-3" style="font-weight: 500;
+            font-size: 10px;
+            line-height: 400%;">
+                    <h4 style="font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;">ارتباط با ما</h4>
+                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> آدرس: کرمان، خیابان شهید بهشتی، کوچه لاله، پلاک2 </p>
+                    </div>
+                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> ایمیل: info@drdoostidrugstore.ir </p>
+                    </div>
+                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> تلفن: 02634265221 / 02634265221 </p>
+                    </div>
+                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> تلفن سراسری: 02634265221 / 02634265221 </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

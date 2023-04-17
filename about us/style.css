@@ -1,8 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-direction: rtl;
-max-width: 1500px;
+    direction: rtl;
 }
 
 @font-face {

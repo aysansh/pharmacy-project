@@ -1,7 +1,8 @@
 body {
-    margin: 0%;
+    margin: 0;
     padding: 0;
      font-family: iransans;
+     direction: rtl;
 }
 
 /* .container {
@@ -102,7 +103,7 @@ a {
 }
 .custom-shape-divider-bottom-1681199124 {
     position: absolute;
-    bottom: -1px;
+    bottom: -110px;
     left: 0;
     width: 100%;
     overflow: hidden;
