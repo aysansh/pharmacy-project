@@ -55,6 +55,8 @@ body {
 @font-face {
     font-family: "Iransans";
     src: url("../fonts/ir_sans.ttf");
+    src: url("../fonts/IRANSans\(FaNum\).ttf");
+
 }
 
 
