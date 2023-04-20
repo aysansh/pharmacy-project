@@ -1,0 +1,349 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="../main page/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../offconvas/dist/style.css">
+
+
+  <title>Document</title>
+  <!-- <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00E673;
+            font-family: 'Barlow Condensed', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .priceSlider {
+            width: 200px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0px 0px 3px 1px #888;
+        }
+
+        .priceSlider h1 {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .priceSlider p {
+            font-size: 10px;
+            margin-top: 20px;
+        }
+
+        .min-max label {
+            font-size: 14px;
+            float: left;
+            margin-right: 5px;
+            line-height: 1.6;
+        }
+
+        .min {
+            float: left;
+        }
+
+        .max {
+            float: right;
+        }
+
+        .min-max {
+            width: 90%;
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 25px 0px 15px 0px;
+        }
+
+        .min-max span {
+            font-size: 10px;
+            text-align: center;
+            display: inline-block;
+            width: 30px;
+            border: 1px solid #dedede;
+        }
+
+        .min-max-range {
+            padding: 30px 0px 20px 0px;
+        }
+
+        .range {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 50%;
+            height: 10px;
+            max-width: 400px;
+            background-color: #dedede;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            float: left;
+        }
+
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #0070BF;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .range::moz-range-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #0070BF;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style> -->
+</head>
+
+<body>
+
+
+
+  <header class="main offcanvas-menu">
+    <div style="position: relative;">
+      <div class="circle" style="position: absolute;">
+      </div>
+    </div>
+
+
+    <!-- نویگیشن -->
+    <nav class="row justify-content-between" style="width: 95%;margin: auto;">
+      <div class="col-lg-10 p-0 pt-5 d-none d-lg-block ">
+        <a href="" class="textcolor fw-normal m-4"> خانه </a>
+        <a href="" class="textcolor fw-normal m-4"> محصولات </a>
+        <a href="" class="textcolor fw-normal m-4"> مشاوره دارویی </a>
+        <a href="" class="textcolor fw-normal m-4"> پیگیری سفارش </a>
+        <a href="" class="textcolor fw-normal m-4"> ارتباط با ما </a>
+      </div>
+      <div class="col-lg-2 p-0 pt-5 align-items-center  text-center d-none d-lg-flex">
+        <a href=""><i class="bi bi-heart icon text-white mx-2"> </i></a>
+        <a href=""><i class="bi bi-cart3 icon text-white mx-2"> </i></a>
+        <div><a href="" class="button textcolor fw-normal p-2">ورود/ثبت نام</a></div>
+      </div>
+
+
+      <!-- off convas -->
+      <div class="d-lg-none  d-block fs-4">
+        <i class="bi bi-list fs-1 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"></i>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+          style="background:#b6ce9c ;">
+          <div class="offcanvas-header mt-5">
+            <h5 id="offcanvasRightLabel"> <a class="text-white" href=""> ورود/ثبت نام </a> </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="line-height: 4rem;">
+            <ul>
+              <li><a class="text-white" href="#section1"> خانه </a></li>
+              <li><a class="text-white" href="#section2"> محصولات </a></li>
+              <li><a class="text-white" href="#section3"> مشاوره دارویی </a></li>
+              <li><a class="text-white" href="#section4"> پیگیری سفارش </a></li>
+              <li><a class="text-white" href="#section5"> ارتباط با ما </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+    <!-- قسمت هدر -->
+    <div class="d-flex flex-row container">
+      <div class="d-flex flex-row container">
+        <div class="col-lg-6 col-sm-12">
+          <div class="mt-5">
+            <h2 class="text-white font-weight: 700;"> داروخانه آنلاین </h2>
+            <h1 style="color: #8BBA5A; margin-right: 200px; font-weight: 700;"> دکتر دوستی شعار </h1>
+          </div>
+
+
+          <!-- search & buttons -->
+          <div style=" margin-top:3rem;">
+            <input style=" width: 100%; border-radius: 10px; height: 56px; border:0 " class="text-muted" type="search"
+              placeholder="     نام محصول ">
+            <div style="position: relative;">
+              <button
+                style="position: absolute; left: 10px; top:-50px; border: 0; border-radius: 7px; background-color: #8BBA5A; color: white; width: 94px; height: 44px;">
+                جستجو </button>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap mt-4 align-content-center grid gap-3" style="justify-content: center;">
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+            <div class="button py-2 text-center"
+              style="padding: 30px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+              <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-lg-block d-none">
+          <img width="100%" src="../images/Asset 11dddd 1.png" alt="">
+        </div>
+        <!-- shape divider  -->
+        <div class="">
+          <div class="custom-shape-divider-bottom-1681884284">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+              preserveAspectRatio="none">
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+
+            <!-- shape divider  -->
+            <div class="">
+              <div class="custom-shape-divider-bottom-1681884284">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                  </svg>
+              </div>
+          </div>
+
+
+
+
+
+
+    <!--bootstrap java script codes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+  <!-- <div class="priceSlider">
+        <h1>Price Range:</h1>
+        <p>Move Slider to choose the price range.</p>
+
+        <div class="min-max">
+            <div class="min">
+                <label>Min</label><span id="min-value"></span>
+            </div>
+            <div class="max">
+                <label>Max</label><span id="max-value"></span>
+            </div>
+        </div>
+
+        <div class="min-max-range">
+            <input type="range" min="0" max="5000" value="2000" class="range" id="min">
+            <input type="range" min="5001" max="10000" value="8000" class="range" id="max">
+        </div>
+
+        <div style="clear: both;"></div>
+    </div> -->
+
+  <!-- <div class="wrapper">
+        <header>
+          <h2>Price Range</h2>
+          <p>Use slider or enter min and max price</p>
+        </header>
+        <div class="price-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="2500">
+          </div>
+          <div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-max" value="7500">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="progress"></div>
+        </div>
+        <div class="range-input">
+          <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+          <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+        </div>
+      </div> -->
+
+  <!-- 
+      <div class="card">
+        <h4>Price Range Slider</h4>
+  
+        <div class="price-content">
+          <div>
+            <label>Min</label>
+            <p id="min-value">$50</p>
+          </div>
+  
+          <div>
+            <label>Max</label>
+            <p id="max-value">$500</p>
+          </div>
+        </div>
+  
+          <div class="range-slider">
+            <input type="range" class="min-price" value="100" min="10" max="500" step="10">
+            <input type="range" class="max-price" value="250" min="10" max="500" step="10">
+          </div>
+      </div>
+   -->
+  <!-- <script src="script.js"></script>
+
+
+
+      <script src="script.js"></script> -->
+  <!-- <script>
+        var minSlider = document.getElementById('min');
+        var maxSlider = document.getElementById('max');
+        
+        var outputMin = document.getElementById('min-value');
+        var outputMax = document.getElementById('max-value');
+        
+        outputMin.innerHTML = minSlider.value;
+        outputMax.innerHTML = maxSlider.value;
+        
+        minSlider.oninput = function(){
+         outputMin.innerHTML=this.value;    
+        }
+        
+        maxSlider.oninput = function(){
+         outputMax.innerHTML=this.value;    
+        }
+        </script> -->
+</body>
+
+</html>
