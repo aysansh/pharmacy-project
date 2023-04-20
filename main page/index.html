@@ -37,13 +37,13 @@
     }
 </style>
 
-<body style="position: relative;">
+<body id="basecolor"  style="position: relative;">
 
-    <header class="main offcanvas-menu ">
-
+    <header class="main offcanvas-menu headpic">
+<img style="width: 100%; z-index: -10; position: absolute; height: inherit;" src="../images/Vector 3.png" alt="">
         <!-- top circle  -->
         <div style="position: relative;">
-            <div class="circle" style="position: absolute;">
+            <div class="circle d-none d-md-flex" style="position: absolute;">
             </div>
         </div>
 
@@ -68,23 +68,39 @@
 
             <!-- off convas -->
             <div class="d-lg-none  d-block fs-5">
-                <i class="bi bi-list fs-1 text-white" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                <i class="bi bi-list fs-1 text-white mt-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                </i>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                     aria-labelledby="offcanvasRightLabel" style="background:#b6ce9c ;">
                     <div class="offcanvas-header mt-5">
                         <h5 id="offcanvasRightLabel"> <a class="text-white" href=""> ورود/ثبت نام </a> </h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        <button type="button" class="btn-close text-reset text-danger" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" style="line-height: 4rem;">
-                        <ul>
-                            <li><a class="text-white" href="#section1"> خانه </a></li>
-                            <li><a class="text-white" href="#section2"> محصولات </a></li>
-                            <li><a class="text-white" href="#section3"> مشاوره دارویی </a></li>
-                            <li><a class="text-white" href="#section4"> پیگیری سفارش </a></li>
-                            <li><a class="text-white" href="#section5"> ارتباط با ما </a></li>
+                        <ul style="list-style: none;">
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-home-page-18.png" alt="">
+                                <a class="text-white" href="#section1"> خانه </a></div></li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-product-18.png" alt="">
+                                <a class="text-white" href="#section2"> محصولات </a></div></li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-doctor-giving-advice-18.png" alt="">
+                                <a class="text-white" href="#section3"> مشاوره دارویی </a></div></li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-follow-up-18.png" alt="">
+                                <a class="text-white" href="#section4"> پیگیری سفارش </a></div></li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-ringer-volume-18.png" alt="">
+                                <a class="text-white" href="#section5"> ارتباط با ما </a></div></li>
                         </ul>
                     </div>
                 </div>
@@ -99,11 +115,12 @@
                 <div class="col-lg-7 col-sm-12">
                     <div class="mt-5">
                         <h2 class="text-white font-weight: 700;"> داروخانه آنلاین </h2>
-                        <h1 style="color: #8BBA5A; margin-right: 200px; font-weight: 700;"> دکتر دوستی شعار </h1>
+                        <h1 style="color: #8BBA5A; margin-left: 150px; font-weight: 700;text-align: end;"> دکتر دوستی شعار </h1>
                     </div>
 
 
                     <!-- search & buttons -->
+                    
                     <div style=" margin-top:3rem; width: 80%;">
                         <input style=" width: 100%; border-radius: 10px; height: 56px; border:0;padding-right: 10px;"
                             class="text-muted" type="search" placeholder="نام محصول ">
@@ -124,7 +141,19 @@
                         </div>
                         <div class="button py-2 text-center"
                             style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   قرص مکمل  </a>
+                        </div>
+                        <div class="button py-2 text-center"
+                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   دستمال مرطوب   </a>
+                        </div>
+                        <div class="button py-2 text-center"
+                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   شربت لیکوزینک   </a>
+                        </div>
+                        <div class="button py-2 text-center"
+                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
+                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   قرص مکمل      </a>
                         </div>
                         <div class="button py-2 text-center"
                             style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
@@ -132,19 +161,7 @@
                         </div>
                         <div class="button py-2 text-center"
                             style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
+                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   دستمال مرطوب    </a>
                         </div>
                     </div>
                 </div>
@@ -154,15 +171,7 @@
                 </div>
             </div>
 
-            <!-- shape divider  -->
-            <div class="custom-shape-divider-bottom-1681889675">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
+
 
         </div>
     </header>
@@ -174,7 +183,7 @@
 
 
     <!-- product categories-->
-    <section class="container" style="margin-bottom: 5rem;">
+    <section class="container" style="margin-bottom: 5rem; margin-top: 2rem;">
 
         <div class="d-flex flex-row justify-content-center mb-5 flex-wrap">
             <div class="button py-2 text-center mt-3 category">
@@ -200,27 +209,25 @@
             </div>
         </div>
 
-        <div style="border: 10px solid #FFFFFF; position: relative;">
-            <img style="width: 100%;" src="../images/pf-s112-pa-138-googlefocus-mockup 1.png" alt="">
-            <h2
-                style="color:#496377; font-size: 36px;font-weight: 700;text-align: center; line-height: 60px; position: absolute; top: 30%; right: 10%;">
-                محصولات مراقبت <br> در برابر آفتاب </h2>
+        <div style="border: 10px solid #FFFFFF;border-radius: 10px;">
+            <img style="width: 100%;" src="../images/photoshoped baner.jpg" alt="">
+               
         </div>
     </section>
 
     <!-- background color green -->
-    <div style="background: rgb(234,244,226);opacity: 0.9;
+    <!-- <div style="background: rgb(234,244,226);opacity: 0.9;
         background: radial-gradient(circle, rgba(234,244,226,1) 26%, rgba(255,255,255,0.35057773109243695) 66%);
-        width: 100%; height: 1500px; position: absolute;z-index: -10; top:450px; right: 50px;;">
-    </div>
+        width: 100%; height: 1500px; position: absolute;z-index: -10; top:450px; right: 0px;;">
+    </div> -->
 
     <!-- discount-->
     <section class="container " style="margin-bottom: 5rem;">
 
         <div class="swiper mySwiper">
             <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
-                <p class="col-1 mb-0 ms-3"> بیشترین تخفیف </p>
-                <div class="col-11" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
+                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> بیشترین تخفیف </p>
+                <div class="col-10 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
                 </div>
             </div>
 
@@ -334,8 +341,8 @@
 
         <div class="swiper mySwiper">
             <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
-                <p class="col-1 mb-0 ms-3"> جدیدترین ها </p>
-                <div class="col-11" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
+                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> جدیدترین ها </p>
+                <div class="col-10 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
                 </div>
             </div>
 
@@ -447,10 +454,10 @@
 
         <div class="row">
             <div class="col-lg-6 col-12 mb-3">
-                <img style="width: 100%" src="../images/23.png" alt="">
+                <img style="width: 100% ; border-radius: 10px;" src="../images/23.png" alt="">
             </div>
             <div class="col-lg-6 col-12">
-                <img style="width: 100%" src="../images/14.png" alt="">
+                <img style="width: 100% ; border-radius: 10px;" src="../images/14.png" alt="">
             </div>
         </div>
 
@@ -458,21 +465,21 @@
 
 
     <!-- background color yellow -->
-    <div
+    <!-- <div
         style="background: rgb(245,239,183);  
      background: radial-gradient(circle, rgba(245,239,183,0.9360119047619048) 13%, rgba(255,255,255,0.30015756302521013) 55%);position: absolute ;width: 100%; height: 1500px;z-index: -11;bottom: 100;">
-    </div>
+    </div> -->
 
 
     <!-- article-->
     <section class="container" style="margin-bottom: 5rem;">
 
         <div class="swiper mySwiper">
-            <div style=" margin-bottom: 40px; " class="d-flex flex-row align-items-center">
-                <div class="col-5" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
+            <div style=" margin-bottom: 40px; " class="d-flex flex-row align-items-center justify-content-between">
+                <div class="col-5 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
                 </div>
-                <p class="col-2 text-center m-0"> مقالات </p>
-                <div class="col-5" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
+                <p class="col-12 col-md-1 text-center m-0 fw-bold fs-5"> مقالات </p>
+                <div class="col-5 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
                 </div>
             </div>
 
@@ -485,91 +492,13 @@
 
                 <div class="swiper-slide rounded-5">
                     <div class="articlebox">
-                        <img class="rounded-3 w-100" src="../images/almond-milk-recipe 5.png" alt="">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
                         <div style="position: relative;">
-                            <div
-                                style=" position: absolute;top: -20px; right: 1px ;background-color: rgba(40, 40, 40, 0.5); border-radius: 5px 0; font-size: 14px;font-weight: 500; width: 90px;height: 20px;text-align: center;">
-                                <p class="text-white">آموزشی </p>
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
                             </div>
                         </div>
-                        <div style="margin-top: 20px; font-size: 16px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
-                        </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-3 w-100" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div
-                                style=" position: absolute;top: -20px; right: 1px ;background-color: rgba(40, 40, 40, 0.5); border-radius: 5px 0; font-size: 14px;font-weight: 500; width: 90px;height: 20px;text-align: center;">
-                                <p class="text-white">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 16px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
-                        </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-3 w-100" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div
-                                style=" position: absolute;top: -20px; right: 1px ;background-color: rgba(40, 40, 40, 0.5); border-radius: 5px 0; font-size: 14px;font-weight: 500; width: 90px;height: 20px;text-align: center;">
-                                <p class="text-white">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 16px; font-weight: 500;"
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
                             class="d-flex justify-content-between">
                             <div class="d-flex">
                                 <p> 2535 </p>
@@ -600,14 +529,13 @@
 
                 <div class="swiper-slide rounded-5">
                     <div class="articlebox">
-                        <img class="rounded-3" width="100%" src="../images/almond-milk-recipe 5.png" alt="">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
                         <div style="position: relative;">
-                            <div
-                                style=" position: absolute;top: -20px; right: 1px ;background-color: rgba(40, 40, 40, 0.5); border-radius: 5px 0; font-size: 14px;font-weight: 500; width: 90px;height: 20px;text-align: center;">
-                                <p class="text-white">آموزشی </p>
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
                             </div>
                         </div>
-                        <div style="margin-top: 20px; font-size: 16px; font-weight: 500;"
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
                             class="d-flex justify-content-between">
                             <div class="d-flex">
                                 <p> 2535 </p>
@@ -638,14 +566,13 @@
 
                 <div class="swiper-slide rounded-5">
                     <div class="articlebox">
-                        <img class="rounded-3 w-100" src="../images/almond-milk-recipe 5.png" alt="">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
                         <div style="position: relative;">
-                            <div
-                                style=" position: absolute;top: -20px; right: 1px ;background-color: rgba(40, 40, 40, 0.5); border-radius: 5px 0; font-size: 14px;font-weight: 500; width: 90px;height: 20px;text-align: center;">
-                                <p class="text-white">آموزشی </p>
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
                             </div>
                         </div>
-                        <div style="margin-top: 20px; font-size: 16px; font-weight: 500;"
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
                             class="d-flex justify-content-between">
                             <div class="d-flex">
                                 <p> 2535 </p>
@@ -673,6 +600,82 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <p> 2535 </p>
+                                <i class="bi bi-eye" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex">
+                                <p> 1400/05/23 </p>
+                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <div class="rounded-top py-2 addbtn">
+                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <p> 2535 </p>
+                                <i class="bi bi-eye" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex">
+                                <p> 1400/05/23 </p>
+                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <div class="rounded-top py-2 addbtn">
+                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
@@ -682,12 +685,12 @@
     <footer
         style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c);padding: 2rem;">
         <div class="d-flex flex-row container text-white flex-wrap">
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-3" style="line-height: 20px;">
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3" style="line-height: 20px;">
                 <div style="padding-left: 4rem;">
                     <h4 style="font-weight: 700;
                 font-size: 14px;
                 line-height: 150%;">درباره ما</h4>
-                    <p style="font-size: 10px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
+                    <p style="font-size: 12px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
                         داروخانه در شهر کرمان که از شهریور ماه ۱۳۹۶ به صاحب امتیاز آقای
                         دکتر فرزاد دوستی شعار و تحت نظارت آقای دکتر فرزاد دوستی شعار دارو ساز و آشنایی هر چه بهتر مصرف
                         کنندگان از محصولات داروخانه راه اندازی گردیده است.</p>
@@ -697,9 +700,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
                 <div class="px-3" style="font-weight: 500;
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 400%;">
                     <h4 style="font-weight: 700;
                 font-size: 14px;
@@ -710,9 +713,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
                 <div class="px-3" style="font-weight: 500;
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 400%;">
                     <h4 style="font-weight: 700;
                 font-size: 14px;
@@ -722,9 +725,9 @@
                     <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک3 </a> </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
                 <div class="ps-3" style="font-weight: 500;
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 400%;">
                     <h4 style="font-weight: 700;
                 font-size: 14px;
@@ -796,8 +799,12 @@
                     spaceBetween: 40,
                 },
                 1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
+                    slidesPerView:4,
+                    spaceBetween:100,
+                },
+                1440: {
+                    slidesPerView:5,
+                    spaceBetween:100,
                 },
             },
             pagination: {

@@ -15,6 +15,15 @@ body {
   color: var(--main-color);
 }
 
+
+/* .headpic {
+  background-image: url("../images/Vector\ 3.png");
+  width: 100% !important;
+  height: 100%;
+  background-repeat: no-repeat;
+} */
+
+
 .addbtn {
   background-color: var(--main-color);
   width: 130px;
@@ -29,55 +38,73 @@ body {
   padding: 16px 16px 0 16px;
   align-items: center;
   border-radius: 10px;
-  box-shadow: -1px -1px 20px 0px #888888;
+  box-shadow: -1px -1px 20px 0px #88888842;
+  width: 235px;
+  height: 360px;
 }
 
 
-.articlebox{
+.articlebox {
   background-color: #FFFFFF;
   /* height: 360px; */
   padding: 16px 16px 0 16px;
   /* align-items: center; */
-  border-radius: 10px;
-  box-shadow: -1px -1px 20px 0px #888888;
+  border-radius: 8px;
+  box-shadow: -1px -1px 20px 0px #88888842;
+  width: 235px;
+  height: 398px;
 }
+
+.amozeshi {
+  position: absolute;
+  top: -30px;
+  right: 1px;
+  background-color: rgba(40, 40, 40, 0.5);
+  border-radius: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
 /* .container {
     
     margin: auto;
 } */
 
 #basecolor {
-  background-image: linear-gradient(145deg,
-      hsl(90deg 46% 66%) 0%,
-      hsl(89deg 46% 69%) 2%,
-      hsl(89deg 46% 72%) 5%,
-      hsl(89deg 46% 75%) 7%,
-      hsl(88deg 46% 78%) 11%,
-      hsl(88deg 46% 81%) 14%,
-      hsl(88deg 46% 84%) 18%,
-      hsl(88deg 46% 88%) 24%,
-      hsl(87deg 47% 91%) 30%,
-      hsl(87deg 47% 94%) 38%,
-      hsl(87deg 47% 97%) 48%,
-      hsl(0deg 0% 100%) 57%,
-      hsl(47deg 64% 96%) 64%,
-      hsl(48deg 63% 91%) 70%,
-      hsl(49deg 61% 87%) 76%,
-      hsl(49deg 60% 82%) 80%,
-      hsl(50deg 59% 78%) 84%,
-      hsl(51deg 58% 73%) 87%,
-      hsl(52deg 56% 68%) 90%,
-      hsl(52deg 55% 64%) 93%,
-      hsl(53deg 54% 59%) 96%,
-      hsl(54deg 54% 53%) 98%,
-      hsl(55deg 58% 48%) 100%);
+  background-image: linear-gradient(135deg,
+      hsl(91deg 88% 68%) 0%,
+      hsl(91deg 88% 70%) 0%,
+      hsl(91deg 88% 73%) 1%,
+      hsl(91deg 88% 76%) 1%,
+      hsl(91deg 88% 79%) 2%,
+      hsl(91deg 88% 82%) 3%,
+      hsl(91deg 88% 85%) 5%,
+      hsl(91deg 88% 88%) 8%,
+      hsl(91deg 88% 91%) 11%,
+      hsl(91deg 88% 94%) 16%,
+      hsl(91deg 88% 97%) 25%,
+      hsl(0deg 0% 100%) 41%,
+      hsl(60deg 94% 97%) 65%,
+      hsl(60deg 94% 93%) 77%,
+      hsl(60deg 94% 90%) 84%,
+      hsl(60deg 93% 87%) 89%,
+      hsl(60deg 93% 84%) 92%,
+      hsl(60deg 93% 80%) 94%,
+      hsl(60deg 93% 77%) 96%,
+      hsl(60deg 93% 74%) 98%,
+      hsl(60deg 93% 71%) 99%,
+      hsl(60deg 93% 67%) 99%,
+      hsl(60deg 93% 64%) 100%);
 }
 
 
 .main {
   width: 100%;
   height: 686px;
-  background: linear-gradient(90deg, #5E5E5E 0%, #323232 100%);
+  /* background: linear-gradient(90deg, #5E5E5E 0%, #323232 100%); */
 }
 
 .icon {
@@ -106,15 +133,14 @@ a {
 }
 
 .circle {
-  position: absolute;
+  /* position: absolute; */
   border-radius: 50%;
   border: 55px solid #FFFFFF;
   opacity: 0.2;
   width: 617px;
   height: 617px;
-  left: 925px;
-  top: -250px;
-
+  right: -300px;
+  bottom: -400px;
 }
 
 .button {
@@ -151,26 +177,6 @@ a {
 
 
 
-.custom-shape-divider-bottom-1681889675 {
-  position: absolute;
-  top: 630px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1681889675 svg {
-  position: relative;
-  display: block;
-  width: calc(116% + 1.3px);
-  height: 59px;
-}
-
-.custom-shape-divider-bottom-1681889675 .shape-fill {
-  fill: #FFFFFF;
-}
 
 /* -- Slideout Sidebar -- */
 
@@ -178,7 +184,7 @@ a {
   position: fixed;
   top: 0;
   left: -190px;
-  z-index: 100;
+  z-index: 10;
   width: 150px;
   height: 100%;
   padding: 20px;
