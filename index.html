@@ -1,0 +1,990 @@
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../offconvas/dist/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <title>Dr Dosti</title>
+</head>
+<style>
+    .swiper {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        height: fit-content;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body id="basecolor" style="position: relative;">
+
+    <header class="main offcanvas-menu headpic">
+        <img style="width: 100%; z-index: -10; position: absolute; height: 630px;" src="./images/Vector 3.png" alt="">
+        <!-- top circle  -->
+        <div style="position: relative;">
+            <div class="circle d-none d-lg-flex" style="position: absolute;">
+            </div>
+        </div>
+
+
+        <!-- navigation-->
+        <nav class="row justify-content-between" style="width: 95%;margin: auto;">
+            <div class="col-lg-9 p-0 my-4 d-none d-lg-block ">
+                <a href="" class="textcolor fw-normal m-4 nav-home"> خانه </a>
+                <a href="" class="textcolor fw-normal m-4  nav-home"> محصولات </a>
+                <a href="" class="textcolor fw-normal m-4  nav-home"> مشاوره دارویی </a>
+                <a href="" class="textcolor fw-normal m-4  nav-home"> پیگیری سفارش </a>
+                <a href="" class="textcolor fw-normal m-4  nav-home"> ارتباط با ما </a>
+            </div>
+            <div class="col-lg-3 p-0 my-4 align-items-center justify-content-center d-none d-lg-flex">
+                <a href=""><i class="bi bi-heart icon text-white mx-2"> </i></a>
+                <a href=""><i class="bi bi-cart3 icon text-white mx-2"> </i></a>
+                <a href="">
+                    <div style="border: 1px solid rgb(255, 255, 255); border-radius: 6px; padding: 7px ;"
+                        class="button textcolor fw-normal px-2  nav-home">
+                        ورود/ثبت نام
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- off convas -->
+            <div class="d-lg-none  d-block fs-5">
+                <i class="bi bi-list fs-1 text-white mt-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                </i>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel" style="background:#b6ce9c ;">
+                    <div class="offcanvas-header mt-5">
+                        <h5 id="offcanvasRightLabel">
+                            <a class="text-white" href=""> ورود/ثبت نام </a>
+                        </h5>
+                        <button type="button" class="btn-close text-reset" style=" background-color:red !important;"
+                            data-bs-dismiss="offcanvas" aria-label="Close">
+
+                        </button>
+                    </div>
+                    <div class="offcanvas-body" style="line-height: 4rem;">
+                        <ul style="list-style: none;">
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="./images/offconvas icons/icons8-home-page-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section1"> خانه </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="./images/offconvas icons/icons8-product-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section2"> محصولات </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;"
+                                        src="./images/offconvas icons/icons8-doctor-giving-advice-18.png" alt="">
+                                    <a class="text-white" href="#section3"> مشاوره دارویی </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="./images/offconvas icons/icons8-follow-up-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section4"> پیگیری سفارش </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;"
+                                        src="./images/offconvas icons/icons8-ringer-volume-18.png" alt="">
+                                    <a class="text-white" href="#section5"> ارتباط با ما </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+
+
+        <!-- header -->
+        <div class="d-flex flex-row container">
+
+            <!-- right part  -->
+            <div class="d-flex flex-row container">
+                <div class="col-lg-7 col-sm-12">
+                    <div class="mt-5">
+                        <h2 class="text-white mb-4" style="margin-right: 4rem;font-weight: 800;"> داروخانه آنلاین </h2>
+                        <h1
+                            style="color: #8BBA5A; margin-left: 75px; font-weight: 700;text-align: end;margin-bottom: 3rem;">
+                            دکتر دوستی
+                            شعار </h1>
+                    </div>
+
+
+                    <!-- search  -->
+
+                    <div style=" margin-top:3rem; width: 90%; margin: auto;">
+                        <input style=" width: 100%; border-radius: 10px; height: 56px; border:0;padding-right: 10px;"
+                            class="text-muted" type="search" placeholder="نام محصول ">
+                        <div style="position: relative;">
+                            <button
+                                style="position: absolute; left: 10px; top:-50px; border: 0; border-radius: 7px; background-color: #8BBA5A; color: white; width: 94px; height: 44px;">
+                                جستجو
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- buttons -->
+                    <div class="d-flex flex-wrap mt-4 align-content-center grid gap-3"
+                        style="justify-content: center;width: 90%;margin: auto;">
+
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        کرم آبرسان
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        قرص مکمل
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        دستمال مرطوب
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        شربت لیکوزینک
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        قرص مکمل
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        کرم آبرسان
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="headbtn"><a href="" style="font-size: 14px; opacity: 0.7;">
+                                <a href="">
+                                    <div class="button py-2 text-center text-white-50">
+                                        دستمال مرطوب
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- left part -->
+                <div class="col-lg-5 d-lg-block d-none">
+                    <img width="100%" src="./images/Asset 11dddd 1.png" alt="">
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- product categories-->
+    <section class="container " style="margin-bottom: 5rem; margin-top:7rem;">
+
+        <div class="d-flex flex-row justify-content-center mb-5 flex-wrap m-lg-5" style="margin-top: 13rem;">
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> آرایشی </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> مکمل ورزشی </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> ورزشی </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> مکمل غذایی </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> بهداشت دهان </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category">
+                    <p style="font-size: 15px;" class="text-black "> تجهیزات پزشکی </p>
+                </div>
+            </a>
+            <a href="">
+                <div class="button py-2 text-center mt-3 category ">
+                    <p style="font-size: 16px;" class="text-black "> مادر و کودک </p>
+                </div>
+            </a>
+        </div>
+
+        <div style="border: 10px solid #FFFFFF;border-radius: 10px;">
+            <img style="width: 100%;" src="./images/photoshoped baner.jpg" alt="">
+
+        </div>
+    </section>
+
+
+
+    <!-- discount-->
+    <section class="container " style="margin-bottom: 5rem;">
+
+        <div class="swiper mySwiper">
+            <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
+                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> بیشترین تخفیف </p>
+                <div class="col-10 d-none d-md-flex"
+                    style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;position: relative;">
+                    <div class="col-10 d-md-none d-flex"
+                        style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;position: absolute;">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-5">
+
+                <div class="swiper-slide rounded-5 " style="width: fit-content;">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5 ms-5">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ; border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <!--recent  -->
+
+    <section class="container " style="margin-bottom: 5rem;">
+
+        <div class="swiper mySwiper">
+            <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
+                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> جدیدترین ها </p>
+                <div class="col-10 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
+                </div>
+            </div>
+
+
+
+            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-5">
+
+                <div class="swiper-slide rounded-5 ">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5 ">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5 ">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5 ">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5 ">
+                    <div class="productbox">
+                        <img style="width: 100%; height: 170px ;border-radius: 10px;"
+                            src="./images/almond-milk-recipe 5.png" alt="">
+                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
+                            <p> شامپو روزنه انلیل </p>
+                            <p style="color: #FFC700;"> 25% </p>
+                        </div>
+                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
+                            <i class="bi bi-tag-fill maincolor mx-1 "></i>
+                            <p class="ms-2 mb-0"> 20,000تومان </p>
+                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- baners-->
+    <section class="container mb-5">
+
+
+        <div class="row">
+
+            <div class="col-lg-6 col-12 mb-3">
+                <div style="border: 3px solid #fff;border-radius: 15px;">
+                    <img style="width: 100% ; border-radius: 10px;" src="./images/23.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 col-12">
+                <div style="border: 3px solid #fff;border-radius: 15px;">
+                    <img style="width: 100% ; border-radius: 10px;" src="./images/14.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- article-->
+    <section class="container" style="margin-bottom: 5rem;">
+
+        <div class="swiper mySwiper">
+            <!-- title  -->
+            <div style=" margin: 50px 0;position: relative; " class="d-flex justify-content-center">
+                <div class=" d-none d-md-flex"
+                    style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;width:40%;position: absolute;left: 0px;bottom: 50%;">
+                </div>
+                <div class=" m-0 fw-bold fs-3 p-0">
+                    <p class="mb-0"> مقالات </p>
+                </div>
+                <div class="d-none d-md-flex"
+                    style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;width: 40%;position: absolute;right: 0px;bottom: 50%;">
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-4">
+
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="./images/almond-milk-recipe 5.png"
+                            alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;margin-bottom: 15px;"
+                            class="d-flex justify-content-between">
+
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 2535 </p>
+                                <i class="bi bi-eye mx-1" style="color: #FFC700;"></i>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 1400/05/23 </p>
+                                <img src="./images/Vector.png" style="width: 14px; height: 14px; margin-right: 5px; "
+                                    alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;">
+                                بهترین مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="./images/almond-milk-recipe 5.png"
+                            alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500; margin-bottom: 15px;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 2535 </p>
+                                <i class="bi bi-eye mx-1" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 1400/05/23 </p>
+                                <img src="./images/Vector.png" style="width: 14px; height: 14px; margin-right: 5px;"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="./images/almond-milk-recipe 5.png"
+                            alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500; margin-bottom: 15px;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 2535 </p>
+                                <i class="bi bi-eye mx-1" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 1400/05/23 </p>
+                                <img src="./images/Vector.png" style="width: 14px; height: 14px; margin-right: 5px;"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="./images/almond-milk-recipe 5.png"
+                            alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500; margin-bottom: 15px;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 2535 </p>
+                                <i class="bi bi-eye mx-1" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 1400/05/23 </p>
+                                <img src="./images/Vector.png" style="width: 14px; height: 14px; margin-right: 5px;"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide rounded-5">
+                    <div class="articlebox">
+                        <img class="rounded-2 w-100" style="height: 150px;" src="./images/almond-milk-recipe 5.png"
+                            alt="">
+                        <div style="position: relative;">
+                            <div class="amozeshi">
+                                <p class="text-white mb-0 mt-1">آموزشی </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500; margin-bottom: 15px;"
+                            class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 2535 </p>
+                                <i class="bi bi-eye mx-1" style="color: #FFC700;"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="m-0"> 1400/05/23 </p>
+                                <img src="./images/Vector.png" style="width: 14px; height: 14px; margin-right: 5px;"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
+                                مولتی ویتامین ناخن
+                            </h2>
+                        </div>
+                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+
+                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+                                شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+                        </div>
+                        <a href="">
+                            <div class="rounded-top py-2 addbtn">
+                                <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- footer  -->
+
+    <footer
+        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c); padding: 3rem 0 3rem 0;">
+        <div class="d-flex flex-row container text-white flex-wrap">
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+
+                <h4 class="footer-title">درباره ما</h4>
+
+                <div class="footerline" style="line-height: 190%;">
+                    <p style="font-size: 12px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
+                        داروخانه در شهر کرمان که از شهریور ماه ۱۳۹۶ به صاحب امتیاز آقای
+                        دکتر فرزاد دوستی شعار و تحت نظارت آقای دکتر فرزاد دوستی شعار دارو ساز و آشنایی هر چه بهتر مصرف
+                        کنندگان از محصولات داروخانه راه اندازی گردیده است.
+                    </p>
+                    <div>
+                        <img src="./images/37.png" alt="">
+                        <img src="./images/1400092408414233224276264 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3 ">
+                <h4 class="footer-title">دسترسی سریع</h4>
+
+                <div class="footerline">
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> درباره ما </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> تماس با ما </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> قوانین و مقررات </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
+                <h4 class="footer-title"> لینک های مفید </h4>
+
+                <div class="footerline">
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> لینک 1 </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> لینک2 </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white footer-links" href=""> لینک3 </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+                <h4 class="footer-title">ارتباط با ما</h4>
+
+                <div class="footerline">
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> آدرس: کرمان، خیابان شهید بهشتی، کوچه لاله، پلاک2 </p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> ایمیل: info@drdoostidrugstore.ir </p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> تلفن: 02634265221 / 02634265221 </p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
+                        <p class="mb-0"> تلفن سراسری: 02634265221 / 02634265221 </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- social media icons -->
+        <div class="d-flex" style="justify-content: center; ">
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-twitter "></i>
+                </a>
+            </div>
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-telegram"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!--bootstrap java script codes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!--swiper java script codes -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // slidesPerView: 4,
+            //   centeredSlides: true,
+            spaceBetween: 30,
+            grabCursor: true,
+            slidesPerView: 1.2,
+            breakpoints: {
+                375: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 40,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 50,
+                },
+                1440: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 50,
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script>
+        const swiper = new Swiper('.sample-slider', {
+            loop: true,
+        })
+    </script>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>

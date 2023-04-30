@@ -1,828 +1,1769 @@
-<html lang="en" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../main page/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../offconvas/dist/style.css">
-
-    <title>Dr Dosti</title>
-</head>
-<style>
-    .swiper {
-        width: 100%;
-        height: fit-content;
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/nouislider.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-icons.css" rel="stylesheet" />
+    <title>category</title>
+  </head>
+  <style>
+    .noUi-handle-lower {
+      display: flex;
+      justify-content: end;
     }
 
-    .swiper-slide {
-        height: fit-content;
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
+    .noUi-target {
+      background: none;
+      border: none;
+      border-radius: 0px;
     }
 
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    #slider-start {
+      border: none;
+      border-radius: none;
+      box-shadow: none;
+      background-color: none;
     }
-</style>
 
-<body id="basecolor"  style="position: relative;">
+    .noUi-connects {
+      background-color: #eed6c4;
+      height: 24px;
+      border-radius: 10px;
+      border: none;
+    }
 
-    <header class="main offcanvas-menu headpic">
-<img style="width: 100%; z-index: -10; position: absolute; height: inherit;" src="../images/Vector 3.png" alt="">
-        <!-- top circle  -->
-        <div style="position: relative;">
-            <div class="circle d-none d-md-flex" style="position: absolute;">
-            </div>
+    .noUi-connect {
+      background-color: #9a8b8b;
+      border-radius: 10px;
+      height: 20px;
+      top: 2px;
+    }
+
+    .noUi-handle {
+      background: none;
+      box-shadow: none;
+      border: none;
+    }
+
+    .noUi-handle:after,
+    .noUi-handle::before {
+      display: none;
+    }
+
+    .noUi-touch-area {
+      background-color: #483434;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      margin-top: 8.2px !important;
+      top: 2px;
+      margin-right: 5px;
+    }
+  </style>
+  <body>
+    <header class="header-c">
+      <div
+        class="py-md-2 px-md-4 p-1"
+        style="
+          color: white;
+          background-color: #6b4f4f;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div>
+          <span style="font-size: 14px">
+            <img src="../img/clock.png" alt="clock" />
+            ساعت کاری : شنبه-پنجشنبه 8:30 - 18:30
+          </span>
         </div>
-
-
-        <!-- navigation-->
-        <nav class="row justify-content-between" style="width: 95%;margin: auto;">
-            <div class="col-lg-9 p-0 my-4 d-none d-lg-block ">
-                <a href="" class="textcolor fw-normal m-4"> خانه </a>
-                <a href="" class="textcolor fw-normal m-4"> محصولات </a>
-                <a href="" class="textcolor fw-normal m-4"> مشاوره دارویی </a>
-                <a href="" class="textcolor fw-normal m-4"> پیگیری سفارش </a>
-                <a href="" class="textcolor fw-normal m-4"> ارتباط با ما </a>
-            </div>
-            <div class="col-lg-3 p-0 my-4 align-items-center justify-content-center d-none d-lg-flex">
-                <a href=""><i class="bi bi-heart icon text-white mx-2"> </i></a>
-                <a href=""><i class="bi bi-cart3 icon text-white mx-2"> </i></a>
-                <div style="border: 1px solid rgb(255, 255, 255); border-radius: 6px; padding: 7px ;">
-                    <a href="" class="button textcolor fw-normal px-2">ورود/ثبت نام</a>
-                </div>
-            </div>
-
-
-            <!-- off convas -->
-            <div class="d-lg-none  d-block fs-5">
-                <i class="bi bi-list fs-1 text-white mt-4" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                </i>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                    aria-labelledby="offcanvasRightLabel" style="background:#b6ce9c ;">
-                    <div class="offcanvas-header mt-5">
-                        <h5 id="offcanvasRightLabel"> <a class="text-white" href=""> ورود/ثبت نام </a> </h5>
-                        <button type="button" class="btn-close text-reset text-danger" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body" style="line-height: 4rem;">
-                        <ul style="list-style: none;">
-                            <li>
-                                <div>
-                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-home-page-18.png" alt="">
-                                <a class="text-white" href="#section1"> خانه </a></div></li>
-                            <li>
-                                <div>
-                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-product-18.png" alt="">
-                                <a class="text-white" href="#section2"> محصولات </a></div></li>
-                            <li>
-                                <div>
-                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-doctor-giving-advice-18.png" alt="">
-                                <a class="text-white" href="#section3"> مشاوره دارویی </a></div></li>
-                            <li>
-                                <div>
-                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-follow-up-18.png" alt="">
-                                <a class="text-white" href="#section4"> پیگیری سفارش </a></div></li>
-                            <li>
-                                <div>
-                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-ringer-volume-18.png" alt="">
-                                <a class="text-white" href="#section5"> ارتباط با ما </a></div></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </nav>
-        <!-- header -->
-        <div class="d-flex flex-row container">
-
-            <!-- right part  -->
-            <div class="d-flex flex-row container">
-                <div class="col-lg-7 col-sm-12">
-                    <div class="mt-5">
-                        <h2 class="text-white font-weight: 700;"> داروخانه آنلاین </h2>
-                        <h1 style="color: #8BBA5A; margin-left: 150px; font-weight: 700;text-align: end;"> دکتر دوستی شعار </h1>
-                    </div>
-
-
-                    <!-- search & buttons -->
-                    
-                    <div style=" margin-top:3rem; width: 80%;">
-                        <input style=" width: 100%; border-radius: 10px; height: 56px; border:0;padding-right: 10px;"
-                            class="text-muted" type="search" placeholder="نام محصول ">
-                        <div style="position: relative;">
-                            <button
-                                style="position: absolute; left: 10px; top:-50px; border: 0; border-radius: 7px; background-color: #8BBA5A; color: white; width: 94px; height: 44px;">
-                                جستجو
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="d-flex flex-wrap mt-4 align-content-center grid gap-3"
-                        style="justify-content: center;width: 80%;">
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   قرص مکمل  </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   دستمال مرطوب   </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   شربت لیکوزینک   </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   قرص مکمل      </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white"> کرم آبرسان </a>
-                        </div>
-                        <div class="button py-2 text-center"
-                            style="padding: 30px 15px 30px 15px; box-sizing: border-box; border: 1px solid #FFFFFF;; border-radius: 7px;">
-                            <a href="" style="font-size: 14px; opacity: 0.7;" class="text-white">   دستمال مرطوب    </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- left part -->
-                <div class="col-lg-5 d-lg-block d-none">
-                    <img width="100%" src="../images/Asset 11dddd 1.png" alt="">
-                </div>
-            </div>
-
-
-
+        <div>
+          <span style="font-size: 14px">
+            <img src="../img/info-icon.png" alt="clock" />
+            درباره ما
+          </span>
+          <span style="font-size: 14px; padding: 0 15px">
+            <a href="#" style="color: white">
+              <img src="../img/message.png" alt="clock" />
+              تماس با ما
+            </a>
+          </span>
         </div>
+      </div>
+      <div style="background-color: #483434">
+        <div class="d-lg-none">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="bi bi-list" style="font-size: 2rem; color: white"></i>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            style="background-color: #5a4242"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <!-- <h5 id="offcanvasRightLabel"> -->
+              <a href="#">
+                <img src="../img/logo-kabinet.png" alt="logo" />
+              </a>
+              <!-- </h5> -->
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <a href="#" style="color: white; padding: 10px 0; display: block">خانه</a>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item" style="border: none">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      سبک کابینت
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <a href="#">انول کابیت</a>
+                      <a href="#">کابینت خوب</a>
+                      <a href="#">زیبا کابینت</a>
+                      <a href="#">کابینت سنگی</a>
+                      <a href="#">کابینت مدل</a>
+                      <a href="#">کابینت جدید</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      آشپزخانه
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <a href="#">انول کابیت</a>
+                      <a href="#">کابینت خوب</a>
+                      <a href="#">زیبا کابینت</a>
+                      <a href="#">کابینت سنگی</a>
+                      <a href="#">کابینت مدل</a>
+                      <a href="#">کابینت جدید</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      سایر محصولات
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <a href="#">انول کابیت</a>
+                      <a href="#">کابینت خوب</a>
+                      <a href="#">زیبا کابینت</a>
+                      <a href="#">کابینت سنگی</a>
+                      <a href="#">کابینت مدل</a>
+                      <a href="#">کابینت جدید</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      خدمات جانبی
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <a href="#">انول کابیت</a>
+                      <a href="#">کابینت خوب</a>
+                      <a href="#">زیبا کابینت</a>
+                      <a href="#">کابینت سنگی</a>
+                      <a href="#">کابینت مدل</a>
+                      <a href="#">کابینت جدید</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div
+            class="d-flex p-4 justify-content-center justify-content-lg-between align-items-center flex-wrap"
+          >
+            <div>
+              <div class="d-flex text-nowrap">
+                <div>
+                  <a href="#">
+                    <img src="../img/logo-kabinet.png" alt="logo" />
+                  </a>
+                </div>
+                <div class="d-flex flex-column justify-content-center px-3 text-white">
+                  <h5 class="m-2" style="font-weight: bold">کابینت لوکس</h5>
+                  <p class="m-0">تولید کابینت های مدرن</p>
+                </div>
+              </div>
+            </div>
+            <div class="category-top d-flex flex-column my-2">
+              <ul class="d-none text-nowrap p-0 d-lg-flex">
+                <li>
+                  <a href="#">خانه</a>
+                </li>
+                <li class="position-relative">
+                  <a href="#">سبک کابینت</a>
+                  <span>
+                    <a href="#">انول کابیت</a>
+                    <a href="#">کابینت خوب</a>
+                    <a href="#">زیبا کابینت</a>
+                    <a href="#">کابینت سنگی</a>
+                    <a href="#">کابینت مدل</a>
+                    <a href="#">کابینت جدید</a>
+                  </span>
+                  <i class="bi bi-caret-down-fill"></i>
+                </li>
+                <li class="position-relative">
+                  <a href="#">آشپزخانه</a>
+                  <span>
+                    <a href="#">انول کابیت</a>
+                    <a href="#">کابینت خوب</a>
+                    <a href="#">زیبا کابینت</a>
+                    <a href="#">کابینت سنگی</a>
+                    <a href="#">کابینت مدل</a>
+                    <a href="#">کابینت جدید</a>
+                  </span>
+                  <i class="bi bi-caret-down-fill"></i>
+                </li>
+                <li class="position-relative">
+                  <a href="#">سایر محصولات</a>
+                  <span>
+                    <a href="#">انول کابیت</a>
+                    <a href="#">کابینت خوب</a>
+                    <a href="#">زیبا کابینت</a>
+                    <a href="#">کابینت سنگی</a>
+                    <a href="#">کابینت مدل</a>
+                    <a href="#">کابینت جدید</a>
+                  </span>
+                  <i class="bi bi-caret-down-fill"></i>
+                </li>
+                <li class="position-relative">
+                  <a href="#">خدمات جانبی</a>
+                  <span>
+                    <a href="#">انول کابیت</a>
+                    <a href="#">کابینت خوب</a>
+                    <a href="#">زیبا کابینت</a>
+                    <a href="#">کابینت سنگی</a>
+                    <a href="#">کابینت مدل</a>
+                    <a href="#">کابینت جدید</a>
+                  </span>
+                  <i class="bi bi-caret-down-fill"></i>
+                </li>
+              </ul>
+              <div
+                style="
+                  width: 100%;
+                  background-color: white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding-left: 30px;
+                  border-radius: 5px;
+                "
+              >
+                <input
+                  type="text"
+                  style="padding: 10px 20px; outline: none; border: none; border-radius: 5px"
+                  placeholder="نام محصول مورد نظر"
+                />
+                <a href="#">
+                  <img src="../img/search-icon.png" alt="icon" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div style="background-color: #40a2ce; padding: 10px; font-size: 14px">
+                <img src="../img/question.png" alt="question" style="padding: 0 5px" />مشاوره و
+                راهنمایی: 021-35856625
+              </div>
+              <div class="d-flex position-relative" style="margin-top: 10px">
+                <a href="#" style="color: #483434; margin-left: 5px; width: 100%">
+                  <div
+                    style="background-color: #dcb000; padding: 0.5rem 1rem; border-radius: 3px"
+                    class="basket-shop"
+                  >
+                    <span
+                      style="
+                        position: absolute;
+                        background-color: #483434;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50px;
+                        margin: -5px -9px;
+                        color: white;
+                      "
+                      >1</span
+                    >
+                    <img src="../img/basket.png" alt="basket" />
+                    <span>سبد خرید</span>
+                  </div>
+                </a>
+                <div>
+                  <div
+                    style="
+                      width: 100%;
+                      background-color: #5a4242;
+                      display: flex;
+                      padding: 0.5rem 1rem;
+                      color: white;
+                      border-radius: 5px;
+                    "
+                  >
+                    <a href="#" style="color: white"> ورود </a>/
+                    <a href="#" style="color: white"> عضویت </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-
-
-
-
-
-
-
-    <!-- product categories-->
-    <section class="container" style="margin-bottom: 5rem; margin-top: 2rem;">
-
-        <div class="d-flex flex-row justify-content-center mb-5 flex-wrap">
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> آرایشی </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> مکمل ورزشی </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> ورزشی </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> مکمل غذایی </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> بهداشت دهان </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category">
-                <a href="" style="font-size: 15px;" class="text-black "> تجهیزات پزشکی </a>
-            </div>
-            <div class="button py-2 text-center mt-3 category ">
-                <a href="" style="font-size: 16px;" class="text-black "> مادر و کودک </a>
-            </div>
-        </div>
-
-        <div style="border: 10px solid #FFFFFF;border-radius: 10px;">
-            <img style="width: 100%;" src="../images/photoshoped baner.jpg" alt="">
-               
-        </div>
-    </section>
-
-    <!-- background color green -->
-    <!-- <div style="background: rgb(234,244,226);opacity: 0.9;
-        background: radial-gradient(circle, rgba(234,244,226,1) 26%, rgba(255,255,255,0.35057773109243695) 66%);
-        width: 100%; height: 1500px; position: absolute;z-index: -10; top:450px; right: 0px;;">
-    </div> -->
-
-    <!-- discount-->
-    <section class="container " style="margin-bottom: 5rem;">
-
-        <div class="swiper mySwiper">
-            <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
-                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> بیشترین تخفیف </p>
-                <div class="col-10 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
-                </div>
-            </div>
-
-
-
-            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-5">
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
+    <main>
+      <section>
+        <div class="container" style="max-width: 1500px">
+          <div class="my-3 w-100 d-flex justify-content-center">
+            <p>فروشگاه اینترنتی کابینت لوکس / کالای خانگی / جاکفشی و جالباسی</p>
+          </div>
+          <div class="row w-100 m-0">
+            <div class="col-xxl-3 col-md-4 col-12">
+              <div
+                class="row"
+                style="
+                  background-color: rgba(238, 214, 196, 44%);
+                  border-radius: 3px;
+                "
+              >
+                <div class="col-12 mt-3">
+                  <div>
+                    <div class="container">
+                      <div>
+                        <p>محدوده قیمت</p>
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <div class="mx-1">
+                          <p>از</p>
                         </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
+                        <div class="mx-1">
+                          <div>
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                              id="slider-margin-value-min"
+                              style="
+                                width: 100px;
+                                height: 29px;
+                                outline: none;
+                                border: none;
+                                border-radius: 10px;
+                                text-align: center;
+                                background-color: white;
+                              "
+                            ></div>
+                          </div>
                         </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                        <div class="mx-1">
+                          <p>تا</p>
                         </div>
+                        <div class="mx-1">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            id="slider-margin-value-max"
+                            style="
+                              width: 100px;
+                              height: 29px;
+                              outline: none;
+                              border: none;
+                              border-radius: 10px;
+                              text-align: center;
+                              background-color: white;
+                            "
+                          ></div>
+                        </div>
+                        <div class="mx-1">
+                          <p>تومان</p>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <div id="slider-start"></div>
+                        <span
+                          class="example-val"
+                          id="slider-margin-value-min"
+                        ></span>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5 ms-5">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ; border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <!--recent  -->
-
-    <section class="container " style="margin-bottom: 5rem;">
-
-        <div class="swiper mySwiper">
-            <div style=" margin-bottom: 40px; " class=" d-flex flex-row align-items-center">
-                <p class="col-12 col-md-2 mb-0 fw-bold fs-5"> جدیدترین ها </p>
-                <div class="col-10 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
-                </div>
-            </div>
-
-
-
-            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-5">
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5 ">
-                    <div class="productbox">
-                        <img style="width: 100%; height: 209px ;border-radius: 10px;"
-                            src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="font-size: 16px;" class="d-flex justify-content-between fw-bold mt-3">
-                            <p> شامپو روزنه انلیل </p>
-                            <p style="color: #FFC700;"> 25% </p>
-                        </div>
-                        <div class="d-flex  align-items-center mb-4" style="font-size: 14px; ">
-                            <i class="bi bi-tag-fill maincolor "></i>
-                            <p class="ms-2 mb-0"> 20,000تومان </p>
-                            <p class="text-decoration-line-through mb-0 text-black-50 mx-4"> 20,000 </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- baners-->
-    <section class="container " style="margin-bottom: 5rem;">
-
-        <div class="row">
-            <div class="col-lg-6 col-12 mb-3">
-                <img style="width: 100% ; border-radius: 10px;" src="../images/23.png" alt="">
-            </div>
-            <div class="col-lg-6 col-12">
-                <img style="width: 100% ; border-radius: 10px;" src="../images/14.png" alt="">
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- background color yellow -->
-    <!-- <div
-        style="background: rgb(245,239,183);  
-     background: radial-gradient(circle, rgba(245,239,183,0.9360119047619048) 13%, rgba(255,255,255,0.30015756302521013) 55%);position: absolute ;width: 100%; height: 1500px;z-index: -11;bottom: 100;">
-    </div> -->
-
-
-    <!-- article-->
-    <section class="container" style="margin-bottom: 5rem;">
-
-        <div class="swiper mySwiper">
-            <div style=" margin-bottom: 40px; " class="d-flex flex-row align-items-center justify-content-between">
-                <div class="col-5 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
-                </div>
-                <p class="col-12 col-md-1 text-center m-0 fw-bold fs-5"> مقالات </p>
-                <div class="col-5 d-none d-md-flex" style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;">
-                </div>
-            </div>
-
-
-
-
-
-            <div class="d-flex flex-row justify-content-between swiper-wrapper pb-4">
-
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div class="amozeshi">
-                                <p class="text-white mb-0 mt-1">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
+                <div class="col-12 p-0">
+                  <div class="my-3">
+                    <div class="container">
+                      <div>
+                        <div class="d-flex">
+                          <div>
+                            <img src="../img/icon/7693332.png" />
+                          </div>
+                          <div class="me-2">
+                            <p
+                              style="
+                                font-size: 14px;
+                                color: #f6416c;
+                                font-weight: bold;
+                              "
+                            >
+                              فیلتر
+                            </p>
+                          </div>
                         </div>
                         <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
+                          <div class="d-flex">
+                            <div class="ms-2">
+                              <input type="checkbox" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">بیشترین تخفیف</p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="ms-2">
+                              <input type="checkbox" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">ارزان ترین</p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="ms-2">
+                              <input type="checkbox" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">پرفروش ترین</p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="ms-2">
+                              <input type="checkbox" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">محبوب ترین</p>
+                            </div>
+                          </div>
                         </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div class="amozeshi">
-                                <p class="text-white mb-0 mt-1">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
+                <div class="col-12 p-0">
+                  <div
+                    style="
+                      width: 100%;
+                      height: 53px;
+                      background-color: rgba(238, 214, 196, 50%);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div class="container h-100">
+                      <div
+                        class="d-flex align-items-center h-100"
+                        style="justify-content: space-between"
+                      >
+                        <div>
+                          <p class="m-0" style="font-size: 14px">
+                            نمایش محصولات موجود
+                          </p>
                         </div>
                         <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
+                          <label class="switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                          </label>
                         </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div class="amozeshi">
-                                <p class="text-white mb-0 mt-1">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
+                <div class="col-12 p-0" style="background-color: #fff7ee">
+                  <div class="my-3">
+                    <div class="container">
+                      <div>
+                        <div class="d-flex">
+                          <div>
+                            <img src="../img/icon/6941441.png" />
+                          </div>
+                          <div>
+                            <p
+                              style="
+                                font-size: 14px;
+                                color: #f6416c;
+                                font-weight: bold;
+                              "
+                            >
+                              دسته بندی محصولات
+                            </p>
+                          </div>
                         </div>
                         <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
-                        </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
+                          
+                          <div class="accordion" id="accordionExample">
+                            <div class="accordion-item mt-2" style="border: none; background: none;">
+                              <div class="d-flex">
+                                <div>
+                                  <img src="../img/icon/2722985.png" />
+                                </div>
+                                <div>
+                                  <h6 class="accordion-button collapsed p-0" style="background: none; box-shadow: none; font-size: 14px;" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    کابینت آماده
+                                  </h6>
+                                </div>
+                              </div>
+                               
+                              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-1">
+                                  <div>
+                                    <ul class="pe-4">
+                                      <li class="mt-3"  style="font-size: 14px;">کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">بازم کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">دوباره کابینت</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
 
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
+
+                            <div class="accordion-item mt-2" style="border: none; background: none;">
+                              <div class="d-flex">
+                                <div>
+                                  <img src="../img/icon/2722985.png" />
+                                </div>
+                                <div>
+                                  <h6 class="accordion-button collapsed p-0" style="background: none; box-shadow: none; font-size: 14px;" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    جاکفشی
+                                  </h6>
+                                </div>
+                              </div>
+                               
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-1">
+                                  <div>
+                                    <ul class="pe-4">
+                                      <li class="mt-3"  style="font-size: 14px;">کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">بازم کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">دوباره کابینت</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+
+
+                            
+                            <div class="accordion-item mt-2" style="border: none; background: none;">
+                              <div class="d-flex">
+                                <div>
+                                  <img src="../img/icon/2722985.png" />
+                                </div>
+                                <div>
+                                  <h6 class="accordion-button collapsed p-0" style="background: none; box-shadow: none; font-size: 14px;" data-bs-toggle="collapse" data-bs-target="#collapseTrheadingThree" aria-expanded="true" aria-controls="collapseTrheadingThree">
+                                    جالباسی زنانه
+                                  </h6>
+                                </div>
+                              </div>
+                               
+                              <div id="collapseTrheadingThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-1">
+                                  <div>
+                                    <ul class="pe-4">
+                                      <li class="mt-3"  style="font-size: 14px;">کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">بازم کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">دوباره کابینت</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+
+                            <div class="accordion-item mt-2" style="border: none; background: none;">
+                              <div class="d-flex">
+                                <div>
+                                  <img src="../img/icon/2722985.png" />
+                                </div>
+                                <div>
+                                  <h6 class="accordion-button collapsed p-0" style="background: none; box-shadow: none; font-size: 14px;" data-bs-toggle="collapse" data-bs-target="#collapseTrheadingfour" aria-expanded="true" aria-controls="collapseTrheadingfour">
+                                    کابینت های لوکس
+                                  </h6>
+                                </div>
+                              </div>
+                               
+                              <div id="collapseTrheadingfour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-1">
+                                  <div>
+                                    <ul class="pe-4">
+                                      <li class="mt-3"  style="font-size: 14px;">کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">بازم کابینت</li>
+                                      <li class="mt-3"  style="font-size: 14px;">دوباره کابینت</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                            
+                            
+
+
+
+                          </div>
+
+                          <!-- <div class="d-flex">
+                            <div>
+                              <img src="../img/icon/2722985.png" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">کابینت آماده</p>
+                              <div>
+                                <ul class="pe-4">
+                                  <li>dd</li>
+                                  <li>dd</li>
+                                  <li>dd</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div>
+                              <img src="../img/icon/2722985.png" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">جاکفشی</p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div>
+                              <img src="../img/icon/2722985.png" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">جالباسی زنانه</p>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div>
+                              <img src="../img/icon/2722985.png" />
+                            </div>
+                            <div>
+                              <p style="font-size: 14px">کابینت های لوکس</p>
+                            </div>
+                          </div> -->
                         </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div class="amozeshi">
-                                <p class="text-white mb-0 mt-1">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
-                        </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide rounded-5">
-                    <div class="articlebox">
-                        <img class="rounded-2 w-100" style="height: 150px;" src="../images/almond-milk-recipe 5.png" alt="">
-                        <div style="position: relative;">
-                            <div class="amozeshi">
-                                <p class="text-white mb-0 mt-1">آموزشی </p>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; font-size: 14px; font-weight: 500;"
-                            class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <p> 2535 </p>
-                                <i class="bi bi-eye" style="color: #FFC700;"></i>
-                            </div>
-                            <div class="d-flex">
-                                <p> 1400/05/23 </p>
-                                <img src="../images/Vector.png" style="width: 14px; height: 14px;" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class=" mb-3" style="font-size: 16px; font-weight: bold;text-align: start;"> بهترین
-                                مولتی ویتامین ناخن
-                            </h2>
-                        </div>
-                        <div style="font-size: 10px; font-weight: 500; text-align: justify;">
-
-                            <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                                شرایط
-                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود تنوع با هدف بهبود. </p>
-                        </div>
-                        <div class="rounded-top py-2 addbtn">
-                            <p class="mb-0 text-center text-white"> مشاهده بیشتر </p>
-                        </div>
-                    </div>
-                </div>
-
-
+              </div>
             </div>
+            <div class="col-xxl-9 col-md-8 col-12">
+              <div class="mt-5 mt-sm-0">
+                <div class="row">
+                  <div
+                    class="col-xl-2 col-lg-3 m-lg-0 mt-3 d-flex justify-content-center"
+                  >
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                      style="
+                        width: 132px;
+                        height: 42px;
+                        border-radius: 3px;
+                        background-color: #ffdcb1;
+                      "
+                    >
+                      <div>
+                        <p class="m-0" style="font-size: 14px">
+                          جاکفشی و جا لباسی
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 m-lg-0 mt-3">
+                    <div class="mx-2">
+                      <div
+                        class="d-flex"
+                        style="background-color: #efefef; border-radius: 3px"
+                      >
+                        <div class="w-100" style="height: 42px">
+                          <input
+                            class="w-100 h-100 pe-2"
+                            style="
+                              background-color: #efefef;
+                              border: none;
+                              outline: none;
+                              border-radius: 3px;
+                            "
+                            placeholder="جستجو کلمه کلیدی"
+                          />
+                        </div>
+                        <div
+                          class="d-flex justify-content-center align-items-center"
+                        >
+                          <img class="ps-2" src="../img/icon/2811790.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-2 col-lg-3 m-lg-0 mt-3 d-flex justify-content-center"
+                  >
+                    <div class="d-flex align-items-center">
+                      <p class="m-0">تعداد 1500 کالا</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <div class="row justify-content-center m-0">
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                          <div
+                            class="d-flex justify-content-end align-items-center ms-1"
+                            style="height: 20%"
+                          >
+                            <div
+                              class="d-flex justify-content-center align-items-center p-1"
+                              style="
+                                width: 42px;
+                                height: 27px;
+                                background-color: #6b4f4f;
+                                border-radius: 10px;
+                              "
+                            >
+                              <p
+                                class="m-0 fw-bold text-white l-0"
+                                style="font-size: 14px"
+                              >
+                                30%
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex h-75 justify-content-around align-items-end"
+                          >
+                            <div
+                              class="position-relative"
+                              style="
+                                border-radius: 5px;
+                                background-color: #fff3e4;
+                              "
+                            >
+                              <div>
+                                <p
+                                  class="p-1 m-0"
+                                  style="font-size: 12px; color: black"
+                                >
+                                  12,000,000
+                                </p>
+                              </div>
+                              <div
+                                class="position-absolute"
+                                style="
+                                  width: 100%;
+                                  height: 2px;
+                                  color: #483434;
+                                  background-color: #ff0000;
+                                  top: 50%;
+                                  transform: rotate(15deg);
+                                "
+                              ></div>
+                            </div>
+                            <div
+                              style="
+                                border-radius: 5px;
+                                background-color: #483434;
+                              "
+                            >
+                              <p
+                                class="p-1 m-0 text-white"
+                                style="font-size: 12px"
+                              >
+                                9,000,000تومان
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #eed6c4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="p-0 d-flex justify-content-center col-lg-4 col-xxl-2-5 col-xl-3 col-md-5 col-sm-5 col-9"
+                  >
+                    <div class="my-4">
+                      <div
+                        style="width: 190px; height: 170px; position: relative"
+                      >
+                        <div style="width: 100%; height: 100%">
+                          <img
+                            class="position-absolute"
+                            width="100%"
+                            height="100%"
+                            style="
+                              object-fit: cover;
+                              border-radius: 5px 5px 0 0;
+                              z-index: -1;
+                            "
+                            src="../img/Untitled-3-Recovered.png"
+                          />
+                        </div>
+                        <div style="width: 100%">
+                          <div
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 100%;
+                              height: 32px;
+                              background-color: #fff3e4;
+                              border-radius: 0 0 5px 5px;
+                            "
+                          >
+                            <p class="m-0 fw-bold" style="font-size: 12px">
+                              جاکفشی آنتیک
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 50px; margin-bottom: 300px">
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="mx-2"
+                    style="
+                      border: 1px solid #eed6c4;
+                      width: 56px;
+                      height: 34px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <p
+                      class="d-flex justify-content-center align-items-center h-100"
+                    >
+                      قبلی
+                    </p>
+                  </div>
+                  <div
+                    class="mx-2"
+                    style="
+                      border: 1px solid #eed6c4;
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <p
+                      class="d-flex justify-content-center align-items-center h-100"
+                    >
+                      1
+                    </p>
+                  </div>
+                  <div
+                    class="text-white"
+                    style="
+                      border: 1px solid #eed6c4;
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 5px;
+                      background-color: #483434;
+                    "
+                  >
+                    <p
+                      class="d-flex justify-content-center align-items-center h-100"
+                    >
+                      2
+                    </p>
+                  </div>
+                  <div
+                    class="mx-2"
+                    style="
+                      border: 1px solid #eed6c4;
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <p
+                      class="d-flex justify-content-center align-items-center h-100"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div
+                    class="mx-2"
+                    style="
+                      border: 1px solid #eed6c4;
+                      width: 56px;
+                      height: 34px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <p
+                      class="d-flex justify-content-center align-items-center h-100"
+                    >
+                      بعدی
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </section>
-
-
-    <footer
-        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c);padding: 2rem;">
-        <div class="d-flex flex-row container text-white flex-wrap">
-            <div class="col-xl-4 col-md-6 col-sm-12 mb-3" style="line-height: 20px;">
-                <div style="padding-left: 4rem;">
-                    <h4 style="font-weight: 700;
-                font-size: 14px;
-                line-height: 150%;">درباره ما</h4>
-                    <p style="font-size: 12px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
-                        داروخانه در شهر کرمان که از شهریور ماه ۱۳۹۶ به صاحب امتیاز آقای
-                        دکتر فرزاد دوستی شعار و تحت نظارت آقای دکتر فرزاد دوستی شعار دارو ساز و آشنایی هر چه بهتر مصرف
-                        کنندگان از محصولات داروخانه راه اندازی گردیده است.</p>
-                    <div>
-                        <img src="../images/37.png" alt="">
-                        <img src="../images/1400092408414233224276264 1.png" alt="">
-                    </div>
+      </section>
+      <section>
+        <div style="width: 100%; min-height: 117px; background-color: #fff3e4">
+          <div class="container h-100" style="max-width: 719px">
+            <div class="row h-100">
+              <div
+                class="col-md-3 mt-3 col-sm-4 col-6 d-flex justify-content-center align-items-center"
+              >
+                <div>
+                  <div class="d-flex justify-content-center">
+                    <img
+                      width="35px"
+                      height="35px"
+                      src="../img/icon/3914478.png"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <p>پشتیبانی آنلاین</p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
-                <div class="px-3" style="font-weight: 500;
-                font-size: 14px;
-                line-height: 400%;">
-                    <h4 style="font-weight: 700;
-                font-size: 14px;
-                line-height: 150%;">دسترسی سریع</h4>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> درباره ما </a></div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> تماس با ما </a></div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> قوانین و مقررات </a>
-                    </div>
+              </div>
+              <div
+                class="col-md-3 mt-3 col-sm-4 col-6 d-flex justify-content-center align-items-center"
+              >
+                <div>
+                  <div class="d-flex justify-content-center">
+                    <img
+                      width="35px"
+                      height="35px"
+                      src="../img/icon/3917579.png"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <p>پشتیبانی آنلاین</p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
-                <div class="px-3" style="font-weight: 500;
-                font-size: 14px;
-                line-height: 400%;">
-                    <h4 style="font-weight: 700;
-                font-size: 14px;
-                line-height: 150%;"> لینک های مفید </h4>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک 1 </a> </div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک2 </a> </div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک3 </a> </div>
+              </div>
+              <div
+                class="col-md-3 mt-3 col-sm-4 col-6 d-flex justify-content-center align-items-center"
+              >
+                <div>
+                  <div class="d-flex justify-content-center">
+                    <img
+                      width="35px"
+                      height="35px"
+                      src="../img/icon/3917628.png"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <p>پشتیبانی آنلاین</p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
-                <div class="ps-3" style="font-weight: 500;
-                font-size: 14px;
-                line-height: 400%;">
-                    <h4 style="font-weight: 700;
-                font-size: 14px;
-                line-height: 150%;">ارتباط با ما</h4>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
-                        <p class="mb-0"> آدرس: کرمان، خیابان شهید بهشتی، کوچه لاله، پلاک2 </p>
-                    </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
-                        <p class="mb-0"> ایمیل: info@drdoostidrugstore.ir </p>
-                    </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
-                        <p class="mb-0"> تلفن: 02634265221 / 02634265221 </p>
-                    </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
-                        <p class="mb-0"> تلفن سراسری: 02634265221 / 02634265221 </p>
-                    </div>
+              </div>
+              <div
+                class="col-md-3 mt-3 col-sm-4 col-6 d-flex justify-content-center align-items-center"
+              >
+                <div>
+                  <div class="d-flex justify-content-center">
+                    <img
+                      width="35px"
+                      height="35px"
+                      src="../img/icon/3917051.png"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <p>پشتیبانی آنلاین</p>
+                  </div>
                 </div>
+              </div>
             </div>
-
+          </div>
         </div>
-        <!-- social media icons -->
-        <div class="d-flex " style="justify-content: center; ">
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff; margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-twitter"></i>
+      </section>
+    </main>
+    <footer style="background-color: #483434; min-height: 247px; color: #ffff">
+      <!--footer-->
+      <div class="container h-100 pt-4">
+        <div class="row align-items-center h-100">
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div>
+                <h5 class="fw-bold" style="font-size: 14px">خدمات مشتریان</h5>
+              </div>
+              <div class="pe-md-0 pe-2 mt-4">
+                <div>
+                  <p style="font-size: 14px">حساب کاربری من</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">پاسخ به سوالات متداول</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">حریم خصوصی</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">پیگیری سفارشات</p>
+                </div>
+              </div>
             </div>
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff;margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-linkedin"></i>
+            <div class="col-xl-3 mt-sm-0 mt-4 col-sm-6 col-12">
+              <div>
+                <h5 class="fw-bold" style="font-size: 14px">کابینت لوکس</h5>
+              </div>
+              <div class="pe-md-0 pe-2 mt-4">
+                <div>
+                  <p style="font-size: 14px">درباره ما</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">راهنمای خرید محصول</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">راهنمای پرداخت</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">نحوه ارسال سفارشات</p>
+                </div>
+              </div>
             </div>
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff;margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-telegram"></i>
+            <div class="col-xl-3 mt-xl-0 mt-4 col-sm-6 col-12">
+              <div>
+                <h5 class="fw-bold" style="font-size: 14px">دسترسی سریع</h5>
+              </div>
+              <div class="pe-md-0 pe-2 mt-4">
+                <div>
+                  <p style="font-size: 14px">محصولات</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">سبد خرید</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">مقالات</p>
+                </div>
+                <div>
+                  <p style="font-size: 14px">تماس با ما</p>
+                </div>
+              </div>
             </div>
+            <div class="col-xl-3 mt-xl-0 mt-4 col-sm-6 col-12">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <h5 class="fw-bold" style="font-size: 14px">
+                    نماد ها و افتخارات
+                  </h5>
+                  <div class="d-flex">
+                    <div class="ms-2">
+                      <img src="../img/icon/instagram (1).png" />
+                    </div>
+                    <div class="ms-2">
+                      <img src="../img/icon/whatsapp.png" />
+                    </div>
+                    <div class="ms-2">
+                      <img src="../img/icon/telegram.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pe-md-0 pe-2 mt-4">
+                <div class="d-flex justify-content-between">
+                  <div
+                    class="d-flex justify-content-center align-items-center"
+                    style="
+                      width: 100px;
+                      height: 104px;
+                      border-radius: 5px;
+                      background-color: #ffff;
+                    "
+                  >
+                    <img src="../img/samandehi.png" />
+                  </div>
+                  <div
+                    class="mx-1 d-flex justify-content-center align-items-center"
+                    style="
+                      width: 100px;
+                      height: 104px;
+                      border-radius: 5px;
+                      background-color: #ffff;
+                    "
+                  >
+                    <img src="../img/enemad.png" />
+                  </div>
+                  <div
+                    class="d-flex justify-content-center align-items-center"
+                    style="
+                      width: 100px;
+                      height: 104px;
+                      border-radius: 5px;
+                      background-color: #ffff;
+                    "
+                  >
+                    <img src="../img/jmobiliraan.png" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <p style="font-size: 12px">
+                    کلیه حقوق این سایت متعلق به مجموعه کابینت لوکس میباشد
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
-
-
-
-
-
-
-
-
-    <!--bootstrap java script codes -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-
-    <!--swiper java script codes -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            // slidesPerView: 4,
-            //   centeredSlides: true,
-            spaceBetween: 30,
-            grabCursor: true,
-            breakpoints: {
-                375: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView:4,
-                    spaceBetween:100,
-                },
-                1440: {
-                    slidesPerView:5,
-                    spaceBetween:100,
-                },
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
-
-    <script>
-        const swiper = new Swiper('.sample-slider', {
-            loop: true,
-        })
-    </script>
-
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-</body>
-
+    <script src="../js/nouislider.min.js"></script>
+    <script src="../js/nouislider.min.mjs"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

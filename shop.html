@@ -8,72 +8,97 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../main page/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href=" https: //blog.hubspot.com/website/css-sidebar">
     <link rel="stylesheet" href="../offconvas/dist/style.css">
+    <link rel="stylesheet" href="./nouislider.min.css">
 
 </head>
 <title>Shop</title>
 </head>
 
-<body>
+
+<body id="basecolor">
 
 
-    <header class="main offcanvas-menu">
-        <!-- the circle on top  -->
-        <div style="position: relative;">
-            <div class="circle" style="position: absolute;">
-            </div>
+    <!-- <img style="width: 100%; z-index: -10; position: absolute; height: inherit;" src="./images/Vector 3.png" alt=""> -->
+    <!-- top circle  -->
+    <!-- <div style="position: relative;">
+        <div class="circle d-none d-lg-flex" style="position: absolute;">
         </div>
+    </div> -->
 
 
+    <header class="main offcanvas-menu p-0"
+        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c); padding: 3rem 0 3rem 0;">
         <!-- نویگیشن -->
         <nav class="row justify-content-between" style="width: 95%;margin: auto;">
-
-
-            <!-- category -->
-            <div class="col-lg-10 p-0 pt-5 d-none d-lg-block ">
-                <a href="" class="textcolor fw-normal m-4"> خانه </a>
-                <a href="" class="textcolor fw-normal m-4"> محصولات </a>
-                <a href="" class="textcolor fw-normal m-4"> مشاوره دارویی </a>
-                <a href="" class="textcolor fw-normal m-4"> پیگیری سفارش </a>
-                <a href="" class="textcolor fw-normal m-4"> ارتباط با ما </a>
+            <div class="col-lg-9 p-0 my-4 d-none d-lg-block ">
+                <a href="" class="textcolor fw-normal m-4 nav-home"> خانه </a>
+                <a href="" class="textcolor fw-normal m-4 nav-home"> محصولات </a>
+                <a href="" class="textcolor fw-normal m-4 nav-home"> مشاوره دارویی </a>
+                <a href="" class="textcolor fw-normal m-4 nav-home"> پیگیری سفارش </a>
+                <a href="" class="textcolor fw-normal m-4 nav-home"> ارتباط با ما </a>
             </div>
-
-
-            <!-- sign up / sign in  -->
-            <div class="col-lg-2 p-0 pt-5 align-items-center  text-center d-none d-lg-flex">
+            <div class="col-lg-3 p-0 my-4 align-items-center justify-content-center d-none d-lg-flex">
                 <a href=""><i class="bi bi-heart icon text-white mx-2"> </i></a>
                 <a href=""><i class="bi bi-cart3 icon text-white mx-2"> </i></a>
-                <div><a href="" class="button textcolor fw-normal p-2">ورود/ثبت نام</a></div>
+                <div style="border: 1px solid rgb(255, 255, 255); border-radius: 6px; padding: 7px ;">
+                    <a href="" class="button textcolor fw-normal px-2 nav-home">ورود/ثبت نام</a>
+                </div>
             </div>
 
 
             <!-- off convas -->
-            <div class="d-lg-none  d-block fs-4">
-                <i class="bi bi-list fs-1 text-white" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+            <div class="d-lg-none  d-block fs-5">
+                <i class="bi bi-list fs-1 text-white my-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                </i>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                     aria-labelledby="offcanvasRightLabel" style="background:#b6ce9c ;">
-
-
                     <div class="offcanvas-header mt-5">
                         <h5 id="offcanvasRightLabel"> <a class="text-white" href=""> ورود/ثبت نام </a> </h5>
-
-
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close text-reset text-danger" data-bs-dismiss="offcanvas"
+                            style=" background-color:red !important;" aria-label="Close"></button>
                     </div>
-
-
                     <div class="offcanvas-body" style="line-height: 4rem;">
-                        <ul>
-                            <li><a class="text-white" href="#section1"> خانه </a></li>
-                            <li><a class="text-white" href="#section2"> محصولات </a></li>
-                            <li><a class="text-white" href="#section3"> مشاوره دارویی </a></li>
-                            <li><a class="text-white" href="#section4"> پیگیری سفارش </a></li>
-                            <li><a class="text-white" href="#section5"> ارتباط با ما </a></li>
+                        <ul style="list-style: none;">
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-home-page-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section1"> خانه </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-product-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section2"> محصولات </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;"
+                                        src="../images/offconvas icons/icons8-doctor-giving-advice-18.png" alt="">
+                                    <a class="text-white" href="#section3"> مشاوره دارویی </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;" src="../images/offconvas icons/icons8-follow-up-18.png"
+                                        alt="">
+                                    <a class="text-white" href="#section4"> پیگیری سفارش </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img style="color: #FFFFFF;"
+                                        src="../images/offconvas icons/icons8-ringer-volume-18.png" alt="">
+                                    <a class="text-white" href="#section5"> ارتباط با ما </a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -82,33 +107,24 @@
         </nav>
 
 
-        <!-- قسمت هدر -->
-        <div class="d-flex flex-row container">
 
-            <!-- title  -->
+
+        <!-- قسمت هدر -->
+        <!-- <div class=" container">
+            <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <div class="mt-5">
                     <h2 style="font-size: 48px; color: #FFFFFF;font-weight: 600;margin-top: 7rem;"> داروخانه آنلاین
                     </h2>
-                    <h1 style="color: #8BBA5A; margin-right: 150px; font-weight: 700;font-size: 58px;margin-top: 8rem;">
+                    <h1 style="color: #8BBA5A; margin-right: 60px; font-weight: 700;font-size: 58px;margin-top: 8rem; text-align: center;">
                         دکتر دوستی شعار </h1>
                 </div>
 
             </div>
 
-            <!-- picture  -->
-            <div class="col-lg-6 d-lg-block d-none"> <img width="100%" src="../images/Asset 11dddd 1.png" alt=""></div>
 
-            <!-- shape  -->
-            <div class="custom-shape-divider-bottom-1681199124 ">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill" fill="#FFFFFF" fill-opacity="1"></path>
-                </svg>
-            </div>
-        </div>
+            <div class="col-lg-6 d-lg-block d-none"> <img width="100%" src="./images/Asset 11dddd 1.png" alt=""></div>
+        </div> -->
 
     </header>
 
@@ -117,875 +133,735 @@
     <section class="container mt-5">
 
 
-        <!-- title of page -->
-        <div style="position: relative; margin-bottom: 32px; " class="text-center">
-            <div style="border: 1px solid #1E1E1E; opacity: 0.1; width: 46%; position: absolute;right: 0px;top: 12px;">
+        <!-- title  -->
+        <div style=" margin: 50px 0;position: relative; " class="d-flex justify-content-center">
+            <div class=" d-none d-md-flex"
+                style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;width:40%;position: absolute;left: 0px;bottom: 50%;">
             </div>
-            <p> محصولات </p>
-            <div style="border: 1px solid #1E1E1E; opacity: 0.1; width: 46%; position: absolute;left: 0px;top: 12px;">
+            <div class=" m-0 fw-bold fs-3 p-0">
+                <p class="mb-0">  محصولات   </p>
             </div>
-        </div>
-
-
-        <!-- side bar -->
-        <div class="d-flex flex-row justify-content-between">
-            <div class=" col-lg-3 d-none d-lg-flex">
-                <div class="sidebar" style="width: 100%; margin-bottom: 1000px;">
-                    <div >
-                        <div style="font-size: small;">
-                            <input type="checkbox" id="scales" name="scales" checked>
-                            <label for="scales"> حراج </label>
-                        </div>
-
-                        <div style="font-size: small;">
-                            <input type="checkbox" id="horns" name="horns">
-                            <label for="horns"> موجود در انبار </label>
-                        </div>
-
-                    </div>
-                    <div>
-                        <div class="priceSlider">
-                            <h1>فیلتر بر اساس قیمت </h1>
-
-                            <div class="min-max">
-                                <div class="min">
-                                    <label> کمترین </label><span id="min-value"></span>
-                                </div>
-                                <div class="max">
-                                    <label> بیشترین </label><span id="max-value"></span>
-                                </div>
-                            </div>
-
-                            <div class="min-max-range">
-                                <input type="range" min="0" max="5000" value="2000" class="range" id="min">
-                                <input type="range" min="5001" max="10000" value="8000" class="range" id="max">
-                            </div>
-
-                            <div style="clear: both;"></div>
-                            <p> قیمت: 593,710 تومان — 1,359,090 تومان </p>
-                        </div>
-                    </div>
-                    <div>Menu Item 3</div>
-                </div>
-                <!-- body content -->
-                <!-- <div class="body-text">
-
-                </div> -->
-            </div>
-            <!-- container of cards -->
-            <!-- products list  -->
-            <div class="card-group row flex-wrap col-lg-9  col-12 ">
-
-
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-5">
-                    <div class="card " style="border-radius: 10px;">
-
-                        <!-- picture  -->
-                        <img style="padding: 15px; width: 100%;" src="./images/almond-milk-recipe 3.png"
-                            class="card-img-top" alt="...">
-
-                        <!-- the body  -->
-                        <div class="card-body" style="position: relative;">
-
-                            <!-- title  -->
-                            <div class=" d-flex justify-content-between">
-                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
-                                    شامپو
-                                    روزنه انلیل </h5>
-                                <p style="color: #FFC700;"> 25% </p>
-                            </div>
-
-                            <!-- price -->
-                            <div class=" card-text d-flex " style="font-size: 14px;margin-bottom: 3rem; ">
-                                <i style="color: #8BBA5A;" class="bi bi-tag-fill"></i>
-                                <p class="ms-2"> 20,000تومان </p>
-                                <p class="text-decoration-line-through text-center text-black-50"> 20,000 </p>
-                            </div>
-
-                            <!-- the button  -->
-                            <div class="card-text d-flex justify-content-center align-items-center">
-                                <div style="background-color: #8BBA5A;width: 50%;font-size: 12px;margin: auto;position: absolute;bottom: 0;padding: 10px 0 10px 0;"
-                                    class="rounded-top mb-0">
-                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="d-none d-md-flex"
+                style="border: 1px solid #1E1E1E; opacity: 0.1; height: 1px;width: 40%;position: absolute;right: 0px;bottom: 50%;">
             </div>
         </div>
 
-        <div style="direction: ltr;">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link text-black-50"> صفحه قبل </a>
-                    </li>
-                    <li class="page-item"><a class="page-link text-black-50" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link text-black-50" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link text-black-50" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link text-black-50" href="#"> صفحه بعد </a>
-                    </li>
+
+        <!-- side bar(filter) -->
+        <div class="row justify-content-between p-0">
+            <div class=" col-xl-3 col-12 mb-5">
+
+
+
+                <!-- filter offconvas  -->
+                <div class="d-flex d-xl-none">
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" style="color: #8BBA5A;"
+                        data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        <div class=" d-flex align-items-center">
+                            <i class="bi bi-filter-circle-fill mx-4" style="font-size: 48px;"></i>
+                            <h2 class="m-0 fw-bold text-black-50">
+                                فیلتر
+                            </h2>
+                        </div>
+                    </button>
+
+
+                    <div class="offcanvas offcanvas-bottom " tabindex="-1" id="offcanvasBottom"
+                        style="height: fit-content;" aria-labelledby="offcanvasBottomLabel">
+
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            </button>
+                        </div>
+
+                        <div class="offcanvas-body small sidebar-background mb-4 mx-2">
+
+
+                            <!-- check boxes  -->
+                            <div style="width:100%;" class="row justify-content-around mt-3">
+                                <div class="form-check col-6"
+                                    style="width: 130px; border: 1px solid rgb(194, 186, 186);border-radius: 7px; padding: 3px 10 3px 30px">
+                                    <input style="background-color: #8BBA5A;" class="form-check-input" type="checkbox"
+                                        value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        حراج
+                                    </label>
+                                </div>
+                                <div class="form-check col-6"
+                                    style="width: 130px; border: 1px solid rgb(194, 186, 186);border-radius: 7px; padding: 3px 10 3px 30px"">
+                                    <input style=" background-color: #8BBA5A;" class="form-check-input" type="checkbox"
+                                    value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        موجود در انبار
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- price & option  -->
+                            <div class="row ">
+
+
+                                <!-- price filter  -->
+                                <div class="slider mt-5 p-0 col-md-6 col-12" style=" width: 98%;">
+                                    <div class="priceSlider me-3" style="width: 95%;">
+                                        <h1 style="margin: -1rem 0 4rem 0;font-size: 1.5rem;">
+                                            محدوده قیمت:
+                                        </h1>
+
+
+                                        <div
+                                        id="slider"
+                                        class="w-100 mb-3 mt-5 nouisliders"
+                                        style="direction: ltr"
+                                      ></div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- option  -->
+                                <div class="fs-6 mt-5 col-md-6 col-12">
+                                    <div>
+                                        <form action="">
+
+                                            <label for="pet-select" class="d-block mb-3"> برند: </label>
+
+                                            <select id="pet-select" class="sidebar-background"
+                                                style=" width: 100%; height: 55px; outline: none;">
+                                                <option value=""> همه برندها </option>
+                                                <option value="dog"> برند1 </option>
+                                                <option value="cat"> برند2 </option>
+                                                <option value="hamster"> برند3 </option>
+                                                <option value="parrot"> برند4 </option>
+                                                <option value="spider"> برند5 </option>
+                                                <option value="goldfish"> برند6 </option>
+                                            </select>
+                                            <input class="favorite styled option-button" type="submit" value="  اعمال ">
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sidebar d-none d-xl-block ms-2" style="width: 100%; height: fit-content;">
+
+                    <!-- check boxes  -->
+                    <div class="sidebar-background ">
+                        <div class="form-check" style="width: 130px;">
+                            <input style="background-color: #8BBA5A;" class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                حراج
+                            </label>
+                        </div>
+                        <div class="form-check" style="width: 130px;">
+                            <input style="background-color: #8BBA5A;" class="form-check-input" type="checkbox" value=""
+                                id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                موجود در انبار
+                            </label>
+                        </div>
+                        
+                        
+                        <!-- price filter  -->
+                        <div class="priceSlider sliders me-3" style="width: 95%;">
+
+                            <h1 style="margin: 5rem 0;font-size: 1.5rem; ">
+                                محدوده قیمت:
+                            </h1>
+                            
+                            
+                            <div id="slider" class="w-100 mb-3 mt-5 nouisliders" style="direction: ltr">
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                        <!-- option  -->
+                        <div class="fs-6 mt-5">
+                            
+                            <form action="">
+                                
+                                <label for="pet-select" class="d-block mb-4" style="font-size: 18px;"> برند: </label>
+                                
+                                <select id="pet-select" class="sidebar-background"
+                                style=" width: 100%; height: 55px; outline: none;">
+                                <option value=""> همه برندها </option>
+                                <option value="dog"> برند1 </option>
+                                <option value="cat"> برند2 </option>
+                                <option value="hamster"> برند3 </option>
+                                <option value="parrot"> برند4 </option>
+                                <option value="spider"> برند5 </option>
+                                <option value="goldfish"> برند6 </option>
+                            </select>
+                            <input class="favorite styled option-button" type="submit" value="  اعمال ">
+                        </form>
+                    </div>
+                </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- container of cards (products list)-->
+            <div class="card-group row flex-wrap col-xl-9  col-12 d-flex justify-content-center p-0">
+
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-6 col-md-4   mb-5" style="max-width: 280px;min-width: 180px;">
+                    <div class="card productbox" style="border-radius: 10px;padding: 10px 10px 0 10px;">
+
+                        <!-- picture  -->
+                        <img style=" width: 100%;" src="./images/almond-milk-recipe 3.png" class="card-img-top"
+                            alt="...">
+
+                        <!-- the body  -->
+                        <div class="card-body pt-3 p-0" style="width: inherit;">
+
+                            <!-- title  -->
+                            <div class=" d-flex justify-content-between">
+                                <h5 class="card-title" style="font-size: 20px;font-weight:bold;margin-bottom:30px;">
+                                    شامپو
+                                    روزنه انلیل </h5>
+                                <p style="color: #FFC700;"> 25% </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class=" card-text d-flex align-items-center "
+                                style="font-size: 14px;margin-bottom: 2rem; ">
+                                <i style="color: #8BBA5A;" class="bi bi-tag-fill ms-1"></i>
+                                <p class="ms-2 mb-0"> 20,000تومان </p>
+                                <p class="mb-0 text-decoration-line-through text-center text-black-50 me-3"> 20,000 </p>
+                            </div>
+
+                            <!-- the button  -->
+                            <a href="">
+                                <div class="rounded-top py-2 addbtn">
+                                    <p class="mb-0 text-center text-white"> افزودن به سبد خرید </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <!-- pagination  -->
+        <div style="direction: ltr;margin: 50px 0; ">
+            <nav aria-label="Page navigation example" class="">
+                <ul class="pagination justify-content-center ">
+                    <div class="d-flex pagebox">
+                        <li class="page-item disabled">
+                            <a class="page-link text-black-50 previous-next" style=" color: #7c985e;"> صفحه قبل </a>
+                        </li>
+                        <li class="page-item"><a style="background-color: #b0da83f3;" class="page-link text-black-50"
+                                href="#">1</a></li>
+                        <li class="page-item"><a class="page-link text-black-50" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-black-50" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link text-black-50 previous-next" style=" color: #7c985e;" href="#"> صفحه بعد
+                            </a>
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -994,110 +870,191 @@
 
 
 
-
+    <!-- footer  -->
 
     <footer
-        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c);padding: 3rem;">
+        style="background-image: linear-gradient(to left, #353535, #3e3e3e, #484848, #525252, #5c5c5c); padding: 3rem 0 3rem 0;">
         <div class="d-flex flex-row container text-white flex-wrap">
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-5" style="line-height: 20px;">
-                <div style="padding-left: 4rem;">
-                    <h4 style="font-weight: 700;
-          font-size: 14px;
-          line-height: 150%;">درباره ما</h4>
-                    <p style="font-size: 10px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+
+                <h4 class="footer-title">درباره ما</h4>
+
+                <div class="footerline" style="line-height: 190%;">
+                    <p style="font-size: 12px;text-align: justify;font-weight: 400;">اولین پایگاه جامع اینترنتی محصولات
                         داروخانه در شهر کرمان که از شهریور ماه ۱۳۹۶ به صاحب امتیاز آقای
                         دکتر فرزاد دوستی شعار و تحت نظارت آقای دکتر فرزاد دوستی شعار دارو ساز و آشنایی هر چه بهتر مصرف
-                        کنندگان از محصولات داروخانه راه اندازی گردیده است.</p>
+                        کنندگان از محصولات داروخانه راه اندازی گردیده است.
+                    </p>
                     <div>
-                        <img src="../images/37.png" alt="">
-                        <img src="../images/1400092408414233224276264 1.png" alt="">
+                        <img src="./images/37.png" alt="">
+                        <img src="./images/1400092408414233224276264 1.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
-                <div class="px-3" style="font-weight: 500;
-          font-size: 10px;
-          line-height: 400%;">
-                    <h4 style="font-weight: 700;
-          font-size: 14px;
-          line-height: 150%;">دسترسی سریع</h4>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> درباره ما </a></div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> تماس با ما </a></div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> قوانین و مقررات </a>
+
+
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3 ">
+                <h4 class="footer-title">دسترسی سریع</h4>
+
+                <div class="footerline">
+                    <div class="nav-home">
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> درباره ما </a>
                     </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> تماس با ما </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> قوانین و مقررات </a>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
-                <div class="px-3" style="font-weight: 500;
-          font-size: 10px;
-          line-height: 400%;">
-                    <h4 style="font-weight: 700;
-          font-size: 14px;
-          line-height: 150%;"> لینک های مفید </h4>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک 1 </a> </div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک2 </a> </div>
-                    <div> <i class="bi bi-circle-fill dot"></i> <a class="text-white" href=""> لینک3 </a> </div>
+
+
+
+            <div class="col-xl-2 col-md-6 col-sm-12 mb-3">
+                <h4 class="footer-title"> لینک های مفید </h4>
+
+                <div class="footerline">
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> لینک 1 </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> لینک2 </a>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-circle-fill dot"></i>
+                        <a class="text-white" href=""> لینک3 </a>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6 col-sm-12 mb-5">
-                <div class="ps-3" style="font-weight: 500;
-          font-size: 10px;
-          line-height: 400%;">
-                    <h4 style="font-weight: 700;
-          font-size: 14px;
-          line-height: 150%;">ارتباط با ما</h4>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+
+
+            <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+                <h4 class="footer-title">ارتباط با ما</h4>
+
+                <div class="footerline">
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
                         <p class="mb-0"> آدرس: کرمان، خیابان شهید بهشتی، کوچه لاله، پلاک2 </p>
                     </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
                         <p class="mb-0"> ایمیل: info@drdoostidrugstore.ir </p>
                     </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
                         <p class="mb-0"> تلفن: 02634265221 / 02634265221 </p>
                     </div>
-                    <div style="display: flex; align-items: center;"> <i class="bi bi-circle-fill dot"></i>
+                    <div style="display: flex; align-items: center;">
+                        <i class="bi bi-circle-fill dot"></i>
                         <p class="mb-0"> تلفن سراسری: 02634265221 / 02634265221 </p>
                     </div>
                 </div>
             </div>
 
         </div>
+
+
+
         <!-- social media icons -->
-        <div class="d-flex " style="position: relative; justify-content: center; ">
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff; margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-twitter"></i>
+        <div class="d-flex" style="justify-content: center; ">
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-twitter "></i>
+                </a>
             </div>
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff;margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-linkedin"></i>
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-linkedin"></i>
+                </a>
             </div>
-            <div
-                style="width: 25px;height: 25px; border-radius: 50%;color: #474747;background-color: #ffffff;margin-left: 1rem;align-items: center;display: flex;justify-content: center;">
-                <i class="bi bi-telegram"></i>
+
+            <div class="footre-socialmedia">
+                <a class="text-dark-emphasis" href="">
+                    <i class="bi bi-telegram"></i>
+                </a>
             </div>
+
         </div>
     </footer>
 
 
+
+
+    <!-- slide bar(price filter) -->
+    <script src="./nouislider.min.js"></script>
     <script>
-        var minSlider = document.getElementById('min');
-        var maxSlider = document.getElementById('max');
+         var formatForSlider = {
+        from: function (formattedValue) {
+          return Number(formattedValue);
+        },
+        to: function (numericValue) {
+          return Math.round(numericValue);
+        },
+      };
+      var formatSlider = document.getElementsByClassName("nouisliders");
+      for (var i = 0; i < formatSlider.length; i++) {
+        noUiSlider.create(formatSlider[i], {
+          // Values are parsed as numbers using the "from" function in "format"
+          start: ["20.0", "80.0"],
+          range: {
+            min: 20.0,
+            max: 80.0,
+          },
+          format: formatForSlider,
+          tooltips: {
+            // tooltips are output only, so only a "to" is needed
+            to: function (numericValue) {
+              return numericValue.toFixed(1);
+            },
+          },
+        });
+        formatSlider[i].noUiSlider.on("slide", addValues);
+      }
 
-        var outputMin = document.getElementById('min-value');
-        var outputMax = document.getElementById('max-value');
+      function addValues() {
+        var allValues = [];
 
-        outputMin.innerHTML = minSlider.value;
-        outputMax.innerHTML = maxSlider.value;
-
-        minSlider.oninput = function () {
-            outputMin.innerHTML = this.value;
+        for (var i = 0; i < formatSlider.length; i++) {
+          console.log(allValues.push(formatSlider[i].noUiSlider.get()));
         }
 
-        maxSlider.oninput = function () {
-            outputMax.innerHTML = this.value;
+        console.log(allValues);
+      }
+      // Values are parsed as numbers using the "from" function in "format"
+      formatSlider.noUiSlider.set(["25.666", "57.66"]);
+
+      var formatValues = [
+        document.getElementById("formatting-start"),
+        document.getElementById("formatting-end"),
+      ];
+
+      formatSlider.noUiSlider.on(
+        "update",
+        function (values, handle, unencoded) {
+          // "values" has the "to" function from "format" applied
+          // "unencoded" contains the raw numerical slider values
+          formatValues[handle].innerHTML =
+            values[handle] + "No format: " + unencoded[handle];
         }
+      );
+
+
     </script>
+
 
 
 
